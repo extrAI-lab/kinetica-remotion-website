@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1314/templates/data-viz/</loc>
+    <loc>http://localhost:1313/templates/data-viz/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/countdown/</loc>
+    <loc>http://localhost:1313/templates/countdown/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/text-intro/</loc>
+    <loc>http://localhost:1313/templates/text-intro/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/podcast-clip/</loc>
+    <loc>http://localhost:1313/templates/podcast-clip/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/product-showcase/</loc>
+    <loc>http://localhost:1313/templates/product-showcase/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/</loc>
+    <loc>http://localhost:1313/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/social-story/</loc>
+    <loc>http://localhost:1313/templates/social-story/</loc>
   </url>
   <url>
-    <loc>http://localhost:1314/templates/</loc>
+    <loc>http://localhost:1313/templates/</loc>
   </url>
 </urlset>

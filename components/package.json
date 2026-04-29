@@ -1,0 +1,25 @@
+{
+  "name": "remotion-components",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "dependencies": {
+    "@remotion/player": "^4.0.454",
+    "culori": "^4.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.454",
+    "remotion-bits": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  }
+}

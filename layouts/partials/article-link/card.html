@@ -1,111 +1,21 @@
-{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
-
 {{ $page := .Page }}
-{{ $featured := "" }}
-{{ $featuredURL := "" }}
-{{ if not .Params.hideFeatureImage }}
-  {{ with $page }}
-    {{ with .Params.featureimage }}
-      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-        {{ if site.Params.hotlinkFeatureImage }}
-          {{ $featuredURL = . }}
-        {{ else }}
-          {{ $featured = resources.GetRemote . }}
-        {{ end }}
-      {{ else }}
-        {{ $featured = resources.Get . }}
-      {{ end }}
-    {{ end }}
-    {{ if not (or $featured $featuredURL) }}
-      {{ $images := .Resources.ByType "image" }}
-      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
-        {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
-      {{ end }}
-    {{ end }}
-    {{ if not (or $featured $featuredURL) }}
-      {{ $default := site.Store.Get "defaultFeaturedImage" }}
-      {{ if $default.url }}
-        {{ $featuredURL = $default.url }}
-      {{ else if $default.obj }}
-        {{ $featured = $default.obj }}
-      {{ end }}
-    {{ end }}
-    {{ if not $featuredURL }}
-      {{ with $featured }}
-        {{ $featuredURL = .RelPermalink }}
-        {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
-          {{ $featuredURL = (.Resize "600x").RelPermalink }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
 
-<article class="article-link--card rt-hoverable relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  {{ with $featuredURL }}
-  <div class="flex-none relative overflow-hidden thumbnail_card" style="--thumbnail-aspect-ratio: 1.77">
+{{/* Map category → Remotion component */}}
+{{ $component := "staggered-fade-in" }}
+{{ $cat := index $page.Params.categories 0 | default "" }}
+{{ if eq $cat "Text" }}{{ $component = "blur-slide-word" }}{{ end }}
+{{ if eq $cat "Charts & Data" }}{{ $component = "list-reveal" }}{{ end }}
 
-    <!-- Static thumbnail -->
-    <img
-      src="{{ . }}"
-      role="presentation"
-      loading="lazy"
-      decoding="async"
-      class="not-prose absolute inset-0 w-full h-full object-cover rt-thumb-img"
-      style="transition: opacity 0.25s;">
+<article
+  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
 
-    <!-- Animated preview overlay (plays on hover) -->
-    <div class="rt-anim-overlay" style="position:absolute;inset:0;background:#0f0f0f;opacity:0;transition:opacity 0.25s;pointer-events:none;">
-
-      <!-- Grid bg -->
-      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.06;" preserveAspectRatio="none">
-        <defs>
-          <pattern id="hg" width="30" height="30" patternUnits="userSpaceOnUse">
-            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#fff" stroke-width="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hg)"/>
-      </svg>
-
-      <!-- Glow -->
-      <div style="position:absolute;top:-40px;left:5%;width:50%;height:160px;background:radial-gradient(ellipse,rgba(99,102,241,0.3) 0%,transparent 70%);"></div>
-
-      <!-- Text block -->
-      <div style="position:absolute;top:12%;left:6%;right:6%;">
-        <div class="rt-ha-title" style="font-size:clamp(0.75rem,1.8vw,1rem);font-weight:800;color:#f5f5f5;margin-bottom:0.35rem;letter-spacing:-0.01em;">
-          Q1 2025 — Performance
-        </div>
-        <div class="rt-ha-sub" style="font-size:clamp(0.6rem,1.2vw,0.75rem);color:#a3a3a3;">
-          Revenue · Growth · Engagement
-        </div>
-        <div class="rt-ha-kpi" style="display:flex;gap:0.35rem;margin-top:0.5rem;flex-wrap:wrap;">
-          <span style="background:rgba(99,102,241,0.25);border:1px solid rgba(99,102,241,0.4);color:#a5b4fc;padding:1px 8px;border-radius:999px;font-size:clamp(0.5rem,0.9vw,0.65rem);font-weight:600;">↑ 24%</span>
-          <span style="background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.35);color:#6ee7b7;padding:1px 8px;border-radius:999px;font-size:clamp(0.5rem,0.9vw,0.65rem);font-weight:600;">↑ 18%</span>
-        </div>
-      </div>
-
-      <!-- Chart -->
-      <div style="position:absolute;bottom:0;left:0;right:0;height:50%;padding:0 4%;">
-        <svg width="100%" height="100%" viewBox="0 0 400 100" preserveAspectRatio="none">
-          <line x1="0" y1="30" x2="400" y2="30" stroke="#fff" stroke-width="0.3" stroke-dasharray="4,4" opacity="0.15"/>
-          <line x1="0" y1="60" x2="400" y2="60" stroke="#fff" stroke-width="0.3" stroke-dasharray="4,4" opacity="0.15"/>
-
-          <rect class="rt-ha-bar" x="10"  y="40" width="38" height="60" rx="3" fill="rgba(99,102,241,0.7)" style="--d:0s"/>
-          <rect class="rt-ha-bar" x="68"  y="20" width="38" height="80" rx="3" fill="rgba(99,102,241,0.85)" style="--d:0.1s"/>
-          <rect class="rt-ha-bar" x="126" y="30" width="38" height="70" rx="3" fill="rgba(99,102,241,0.7)" style="--d:0.2s"/>
-          <rect class="rt-ha-bar" x="184" y="10" width="38" height="90" rx="3" fill="rgba(99,102,241,1)" style="--d:0.3s"/>
-          <rect class="rt-ha-bar" x="242" y="22" width="38" height="78" rx="3" fill="rgba(99,102,241,0.85)" style="--d:0.15s"/>
-          <rect class="rt-ha-bar" x="300" y="8"  width="38" height="92" rx="3" fill="rgba(16,185,129,0.9)" style="--d:0.25s"/>
-
-          <polyline class="rt-ha-line" points="29,65 87,45 145,55 203,30 261,42 319,25"
-            fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            style="stroke-dasharray:350;stroke-dashoffset:350;"/>
-        </svg>
-      </div>
-
+  <div class="flex-none relative overflow-hidden thumbnail_card" style="background:#09090b;">
+    <div
+      class="rt-player-card not-prose absolute inset-0 w-full h-full"
+      data-component="{{ $component }}"
+      style="pointer-events:none;">
     </div>
   </div>
-  {{ end }}
 
   {{ if and .Draft .Site.Params.article.showDraftLabel }}
     <span class="absolute top-0 right-0 m-2">
@@ -122,15 +32,15 @@
           href="{{ $page.RelPermalink }}"
         {{ end }}
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>{{ .Title | emojify }}</h2>
+        <h2>{{ $page.Title | emojify }}</h2>
       </a>
     </header>
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      {{ partial "article-meta/basic.html" . }}
+      {{ partial "article-meta/basic.html" $page }}
     </div>
-    {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
+    {{ if $page.Params.showSummary | default ($page.Site.Params.list.showSummary | default false) }}
       <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
-        {{ .Summary | plainify }}
+        {{ $page.Summary | plainify }}
       </div>
     {{ end }}
   </div>

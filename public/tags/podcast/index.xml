@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Podcast on Free Remotion Templates</title>
-    <link>http://localhost:1314/tags/podcast/</link>
+    <link>http://localhost:1313/tags/podcast/</link>
     <description>Recent content in Podcast on Free Remotion Templates</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Remotion Templates</copyright>
-    <atom:link href="http://localhost:1314/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Podcast Clip</title>
-      <link>http://localhost:1314/templates/podcast-clip/</link>
+      <link>http://localhost:1313/templates/podcast-clip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1314/templates/podcast-clip/</guid>
+      <guid>http://localhost:1313/templates/podcast-clip/</guid>
       <description>Auto-caption podcast clip with waveform animation — ideal for audiogram-style social posts.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/templates/podcast-clip/feature.svg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/templates/podcast-clip/feature.svg" />
     </item>
     
   </channel>
