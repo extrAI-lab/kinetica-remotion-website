@@ -3,6 +3,7 @@ title: "Event Countdown"
 description: "Animated countdown timer template for product launches, events, and live streams. Fully customizable."
 tags: ["countdown", "event", "launch"]
 categories: ["Intro & Outro"]
+subcategory: "Countdown"
 summary: "Animated countdown timer for product launches, events, and live streams."
 npm: "npx create-video@latest --countdown"
 bun: "bun create video --countdown"

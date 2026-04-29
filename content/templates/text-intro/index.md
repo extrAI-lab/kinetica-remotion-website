@@ -3,6 +3,7 @@ title: "Kinetic Text Intro"
 description: "Bold kinetic typography intro template with spring animations and customizable color schemes."
 tags: ["typography", "intro", "animation"]
 categories: ["Text"]
+subcategory: "Title Cards"
 summary: "Bold kinetic typography intro with spring animations and customizable color schemes."
 npm: "npx create-video@latest --text-intro"
 bun: "bun create video --text-intro"

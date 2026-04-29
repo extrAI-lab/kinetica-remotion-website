@@ -3,6 +3,7 @@ title: "Data Visualization"
 description: "Animated charts and data visualization template. Turn your numbers into compelling visual stories."
 tags: ["data", "charts", "business"]
 categories: ["Charts & Data"]
+subcategory: "KPI & Metrics"
 summary: "Animated charts and data visualization — turn your numbers into compelling visual stories."
 npm: "npx create-video@latest --data-viz"
 bun: "bun create video --data-viz"

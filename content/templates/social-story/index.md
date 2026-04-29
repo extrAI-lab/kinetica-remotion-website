@@ -3,6 +3,7 @@ title: "Social Story"
 description: "Animated social media story template with smooth transitions and dynamic text overlays. Perfect for Instagram and TikTok."
 tags: ["social", "story", "animation"]
 categories: ["Content Animation"]
+subcategory: "Social Media"
 summary: "Animated social media story template with smooth transitions and dynamic text overlays."
 npm: "npx create-video@latest --social-story"
 bun: "bun create video --social-story"

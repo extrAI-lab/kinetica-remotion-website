@@ -3,6 +3,7 @@ title: "Podcast Clip"
 description: "Auto-caption podcast clip template with waveform animation and speaker captions. Ideal for audiogram-style social posts."
 tags: ["podcast", "audio", "captions"]
 categories: ["Content Animation"]
+subcategory: "Podcast"
 summary: "Auto-caption podcast clip with waveform animation — ideal for audiogram-style social posts."
 npm: "npx create-video@latest --podcast-clip"
 bun: "bun create video --podcast-clip"

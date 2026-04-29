@@ -3,6 +3,7 @@ title: "Product Showcase"
 description: "Cinematic product reveal video template with 3D-style animations, perfect for e-commerce and launch campaigns."
 tags: ["product", "showcase", "ecommerce"]
 categories: ["Cinematic"]
+subcategory: "Product Showcase"
 summary: "Cinematic product reveal video with 3D-style animations for e-commerce and launches."
 npm: "npx create-video@latest --product-showcase"
 bun: "bun create video --product-showcase"
