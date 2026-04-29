@@ -9,15 +9,5 @@
     <copyright>© 2026 Remotion Templates</copyright>
     <atom:link href="http://localhost:1313/tags/audio/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Podcast Clip</title>
-      <link>http://localhost:1313/templates/podcast-clip/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/templates/podcast-clip/</guid>
-      <description>Auto-caption podcast clip with waveform animation — ideal for audiogram-style social posts.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/templates/podcast-clip/feature.svg" />
-    </item>
-    
   </channel>
 </rss>

@@ -9,15 +9,5 @@
     <copyright>© 2026 Remotion Templates</copyright>
     <atom:link href="http://localhost:1313/categories/cinematic/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Product Showcase</title>
-      <link>http://localhost:1313/templates/product-showcase/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/templates/product-showcase/</guid>
-      <description>Cinematic product reveal video with 3D-style animations for e-commerce and launches.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/templates/product-showcase/feature.svg" />
-    </item>
-    
   </channel>
 </rss>

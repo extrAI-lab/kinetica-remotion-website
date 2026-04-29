@@ -1,16 +1,10 @@
 {{ define "main" }}
 
-{{/* Sidebar category + subcategory definition */}}
+{{/* Sidebar categories matching kinetica-remotion registry */}}
 {{ $sidebar := slice
-  (dict "cat" "Charts & Data" "subs" (slice "KPI & Metrics" "Bar & Line Charts" "Heatmaps"))
-  (dict "cat" "Text" "subs" (slice "Title Cards" "Lower Thirds" "Kinetic Type" "Captions"))
-  (dict "cat" "Content Animation" "subs" (slice "Social Media" "Podcast" "Product Demo" "Explainer"))
-  (dict "cat" "Cinematic" "subs" (slice "Product Showcase" "Film Titles" "Trailers"))
-  (dict "cat" "Background" "subs" (slice "Particles" "Gradients" "Geometric"))
-  (dict "cat" "Transition" "subs" (slice "Wipe & Slide" "Morph" "Glitch"))
-  (dict "cat" "Logo & Branding" "subs" (slice "Logo Reveal" "Sting" "Watermark"))
-  (dict "cat" "Intro & Outro" "subs" (slice "Countdown" "End Cards" "Bumper"))
-  (dict "cat" "Image & Media" "subs" (slice "Gallery" "Slideshow" "Ken Burns"))
+  (dict "cat" "text" "subs" (slice "Title Cards" "Lower Thirds" "Kinetic Type"))
+  (dict "cat" "transitions" "subs" (slice "Fade" "Wipe" "Mask"))
+  (dict "cat" "visual" "subs" (slice "Particles" "Progress" "Highlights"))
 }}
 
 <style>
@@ -91,7 +85,7 @@
   <!-- Grid — own scroll -->
   <div id="rt-grid-scroll" class="rt-scroll" style="flex:1; min-width:0; padding-top:1.5rem; padding-bottom:4rem;">
     <div id="template-grid" class="w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {{ range .Pages }}
+      {{ range where .Site.RegularPages "Section" "templates" }}
       <div
         data-category="{{ index .Params.categories 0 | default "" }}"
         data-subcategory="{{ .Params.subcategory | default "" }}">

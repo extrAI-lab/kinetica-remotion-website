@@ -8,12 +8,14 @@
     "watch": "vite build --watch"
   },
   "dependencies": {
+    "@extrai-lab/kinetica-remotion": "file:../../remotion-components",
     "@remotion/player": "^4.0.454",
     "culori": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remotion": "^4.0.454",
-    "remotion-bits": "^0.2.0"
+    "remotion-bits": "^0.2.0",
+    "zod": "^3.22.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",

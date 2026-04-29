@@ -7,16 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Remotion Templates</copyright>
-    <atom:link href="http://localhost:1313/categories/text/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/text/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Kinetic Text Intro</title>
-      <link>http://localhost:1313/templates/text-intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Animated Counter</title>
+      <link>http://localhost:1313/templates/text/animated-counter/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text-intro/</guid>
-      <description>Bold kinetic typography intro with spring animations and customizable color schemes.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/templates/text-intro/feature.svg" />
+      <guid>http://localhost:1313/templates/text/animated-counter/</guid>
+      <description>&lt;p&gt;An animated number counter with configurable easing, formatting, and a subtle scale pop.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Animated Title</title>
+      <link>http://localhost:1313/templates/text/animated-title/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/text/animated-title/</guid>
+      <description>&lt;p&gt;A centered title that fades and slides into place.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Glitch Text</title>
+      <link>http://localhost:1313/templates/text/glitch-text/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/text/glitch-text/</guid>
+      <description>&lt;p&gt;A cyberpunk-style glitch text effect with chromatic aberration and scanlines.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Reveal Text</title>
+      <link>http://localhost:1313/templates/text/reveal-text/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/text/reveal-text/</guid>
+      <description>&lt;p&gt;Per-character or per-word staggered text reveal with blur, scale, and directional motion.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Subtitle</title>
+      <link>http://localhost:1313/templates/text/subtitle/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/text/subtitle/</guid>
+      <description>&lt;p&gt;A lower-third subtitle with a typewriter reveal.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

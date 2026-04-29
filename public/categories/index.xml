@@ -7,54 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Remotion Templates</copyright>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Charts &amp; Data</title>
-      <link>http://localhost:1313/categories/charts--data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/charts--data/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Cinematic</title>
-      <link>http://localhost:1313/categories/cinematic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/cinematic/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Content Animation</title>
-      <link>http://localhost:1313/categories/content-animation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/content-animation/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Intro &amp; Outro</title>
-      <link>http://localhost:1313/categories/intro--outro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/intro--outro/</guid>
-      <description></description>
-      
-    </item>
+    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Text</title>
       <link>http://localhost:1313/categories/text/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/text/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Transitions</title>
+      <link>http://localhost:1313/categories/transitions/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/transitions/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Visual</title>
+      <link>http://localhost:1313/categories/visual/</link>
+      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/visual/</guid>
       <description></description>
       
     </item>
