@@ -1,0 +1,46 @@
+colorScheme = "slate"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = false
+
+mainSections = ["templates"]
+thumbnailAspectRatio = "1.77"
+
+disableImageOptimization = false
+disableTextInHeader = false
+
+[header]
+  layout = "fixed"
+
+[footer]
+  showMenu = false
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+[homepage]
+  layout = "custom"
+  showRecent = false
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = false
+
+[article]
+  showDate = false
+  showAuthor = false
+  showHero = true
+  heroStyle = "big"
+  showBreadcrumbs = false
+  showDraftLabel = false
+  showEdit = false
+  showReadingTime = false
+
+[list]
+  showBreadcrumbs = false
+  showSummary = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false

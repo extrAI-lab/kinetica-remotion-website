@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>http://localhost:1314/templates/data-viz/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/countdown/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/text-intro/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/podcast-clip/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/product-showcase/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/social-story/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1314/templates/</loc>
+  </url>
+</urlset>

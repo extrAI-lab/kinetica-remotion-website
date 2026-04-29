@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f43f5e"/>
+      <stop offset="100%" style="stop-color:#9f1239"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#g)"/>
+  <!-- Large text blocks -->
+  <rect x="60" y="80" width="380" height="60" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <rect x="60" y="155" width="280" height="45" rx="8" fill="rgba(255,255,255,0.18)"/>
+  <rect x="60" y="215" width="320" height="45" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <rect x="60" y="275" width="180" height="35" rx="8" fill="rgba(255,255,255,0.12)"/>
+  <!-- Animated cursor blink -->
+  <rect x="452" y="80" width="4" height="60" rx="2" fill="rgba(255,255,255,0.8)"/>
+  <!-- Spring motion lines -->
+  <line x1="480" y1="140" x2="560" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="480" y1="180" x2="560" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- Decorative dots grid -->
+  <circle cx="510" cy="260" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="530" cy="260" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="550" cy="260" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="510" cy="280" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="530" cy="280" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="550" cy="280" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="510" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="530" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="550" cy="300" r="3" fill="rgba(255,255,255,0.3)"/>
+</svg>

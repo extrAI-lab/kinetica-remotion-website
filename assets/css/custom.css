@@ -1,0 +1,59 @@
+/* Force body centering */
+body {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.thumbnail_card {
+  min-width: 0 !important;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* ── Card hover animation ── */
+
+/* Overlay: show/hide via CSS :hover (transition, non animation — non ha il problema del "stuck") */
+.rt-hoverable:hover .rt-anim-overlay { opacity: 1 !important; }
+.rt-hoverable:hover .rt-thumb-img    { opacity: 0 !important; }
+
+/* Default states (no animation, elementi a riposo) */
+.rt-ha-bar   { transform-origin: bottom; transform: scaleY(0); }
+.rt-ha-line  { stroke-dasharray: 350; stroke-dashoffset: 350; }
+.rt-ha-title { opacity: 0; transform: translateY(10px); }
+.rt-ha-sub   { opacity: 0; transform: translateY(10px); }
+.rt-ha-kpi   { opacity: 0; transform: translateY(10px); }
+
+/* Animations fire only when .rt-hovering is present (added/removed via JS) */
+@keyframes rt-grow-bar {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+.rt-hovering .rt-ha-bar {
+  animation: rt-grow-bar 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes rt-draw-line {
+  from { stroke-dashoffset: 350; }
+  to   { stroke-dashoffset: 0; }
+}
+.rt-hovering .rt-ha-line {
+  animation: rt-draw-line 0.8s ease-out both;
+  animation-delay: 0.4s;
+}
+
+@keyframes rt-slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rt-hovering .rt-ha-title {
+  animation: rt-slide-up 0.3s ease-out both;
+}
+.rt-hovering .rt-ha-sub {
+  animation: rt-slide-up 0.3s ease-out both;
+  animation-delay: 0.08s;
+}
+.rt-hovering .rt-ha-kpi {
+  animation: rt-slide-up 0.3s ease-out both;
+  animation-delay: 0.16s;
+}
