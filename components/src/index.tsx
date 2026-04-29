@@ -4,6 +4,7 @@ import { Player, PlayerRef } from "@remotion/player";
 import { ListReveal } from "./ListReveal";
 import { StaggeredFadeIn } from "./StaggeredFadeIn";
 import { BlurSlideWord } from "./BlurSlideWord";
+import { CombinedShowcase } from "./CombinedShowcase";
 
 type ComponentConfig = {
   component: React.FC;
@@ -92,34 +93,16 @@ const HoverPlayer: React.FC<HoverPlayerProps> = ({
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Card hover players
-  document.querySelectorAll<HTMLElement>(".rt-player-card").forEach((container) => {
-    const componentName = container.dataset.component ?? "staggered-fade-in";
-    const config = registry[componentName];
-    if (!config) return;
-
-    const cardEl = container.closest("article") ?? container;
-    const root = createRoot(container);
-    root.render(<HoverPlayer {...config} cardEl={cardEl} />);
-  });
-
-  // Single template page – full autoplay preview
-  const singletons: Record<string, string> = {
-    "remotion-single-preview": "list-reveal",
-  };
-  for (const [id, componentName] of Object.entries(singletons)) {
-    const el = document.getElementById(id);
-    if (!el) continue;
-    const config = registry[componentName];
-    if (!config) continue;
-    const root = createRoot(el);
-    root.render(
+  // Homepage hero — combined autoplay loop
+  const heroEl = document.getElementById("remotion-hero");
+  if (heroEl) {
+    createRoot(heroEl).render(
       <Player
-        component={config.component}
-        compositionWidth={config.width}
-        compositionHeight={config.height}
-        fps={config.fps}
-        durationInFrames={config.durationInFrames}
+        component={CombinedShowcase}
+        compositionWidth={1920}
+        compositionHeight={1080}
+        fps={30}
+        durationInFrames={270}
         loop
         autoPlay
         controls={false}
@@ -128,5 +111,39 @@ document.addEventListener("DOMContentLoaded", () => {
         style={{ width: "100%", height: "100%" }}
       />
     );
+  }
+
+  // Card hover players
+  document.querySelectorAll<HTMLElement>(".rt-player-card").forEach((container) => {
+    const componentName = container.dataset.component ?? "staggered-fade-in";
+    const config = registry[componentName];
+    if (!config) return;
+
+    const cardEl = container.closest("article") ?? container;
+    createRoot(container).render(<HoverPlayer {...config} cardEl={cardEl} />);
+  });
+
+  // Single template page — autoplay preview, component driven by data attribute
+  const singleEl = document.getElementById("remotion-single-preview");
+  if (singleEl) {
+    const name = singleEl.dataset.component ?? "list-reveal";
+    const config = registry[name];
+    if (config) {
+      createRoot(singleEl).render(
+        <Player
+          component={config.component}
+          compositionWidth={config.width}
+          compositionHeight={config.height}
+          fps={config.fps}
+          durationInFrames={config.durationInFrames}
+          loop
+          autoPlay
+          controls={false}
+          clickToPlay={false}
+          doubleClickToFullscreen={false}
+          style={{ width: "100%", height: "100%" }}
+        />
+      );
+    }
   }
 });

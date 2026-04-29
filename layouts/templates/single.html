@@ -26,7 +26,11 @@
       <div class="rt-preview">
 
         <!-- Remotion component mounts here -->
-        <div id="remotion-single-preview" style="position:absolute;inset:0;width:100%;height:100%;"></div>
+        {{ $component := "staggered-fade-in" }}
+        {{ $cat := index .Params.categories 0 | default "" }}
+        {{ if eq $cat "Text" }}{{ $component = "blur-slide-word" }}{{ end }}
+        {{ if eq $cat "Charts & Data" }}{{ $component = "list-reveal" }}{{ end }}
+        <div id="remotion-single-preview" data-component="{{ $component }}" style="position:absolute;inset:0;width:100%;height:100%;"></div>
 
       </div>
 
