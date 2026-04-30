@@ -31,6 +31,11 @@ import {
   tickerDefaults,
   Badge,
   badgeDefaults,
+  // Templates
+  NewsBroadcastTemplate,
+  newsBroadcastDefaults,
+  ProductLaunchTemplate,
+  productLaunchDefaults,
 } from "@extrai-lab/kinetica-remotion";
 import { CombinedShowcase } from "./CombinedShowcase";
 
@@ -169,6 +174,25 @@ const registry: Record<string, ComponentConfig> = {
     durationInFrames: 90,
     posterFrame: 15,
     defaultProps: badgeDefaults as Record<string, unknown>,
+  },
+  // Full templates
+  "news-broadcast": {
+    component: NewsBroadcastTemplate as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 210,
+    posterFrame: 50,
+    defaultProps: newsBroadcastDefaults as Record<string, unknown>,
+  },
+  "product-launch": {
+    component: ProductLaunchTemplate as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 180,
+    posterFrame: 50,
+    defaultProps: productLaunchDefaults as Record<string, unknown>,
   },
 };
 

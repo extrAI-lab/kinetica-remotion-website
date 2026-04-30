@@ -62,4 +62,13 @@
     <loc>http://localhost:1313/components/transitions/wipe-transition/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url>
+  <url>
+    <loc>http://localhost:1313/templates/news-broadcast/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/templates/product-launch/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/templates/</loc>
+  </url>
 </urlset>

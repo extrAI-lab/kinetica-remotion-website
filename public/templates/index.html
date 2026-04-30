@@ -15,13 +15,13 @@
 
   
   
-    <title>Templates &middot; Free Remotion Templates</title>
-    <meta name="title" content="Templates &middot; Free Remotion Templates">
+    <title>Templates &middot; Remotion Components</title>
+    <meta name="title" content="Templates &middot; Remotion Components">
   
 
   
   
-    <meta name="description" content="All Remotion video templates">
+    <meta name="description" content="Full video templates built by combining Remotion components">
   
   
   
@@ -30,27 +30,27 @@
   
   
     
-      <link rel="alternate" type="application/rss+xml" href="/templates/index.xml" title="Free Remotion Templates" />
+      <link rel="alternate" type="application/rss+xml" href="/templates/index.xml" title="Remotion Components" />
   
 
   
   
-    <meta name="author" content="Remotion Templates">
+    <meta name="author" content="Remotion Components">
   
   
 
   
   <meta property="og:url" content="http://localhost:1313/templates/">
-  <meta property="og:site_name" content="Free Remotion Templates">
+  <meta property="og:site_name" content="Remotion Components">
   <meta property="og:title" content="Templates">
-  <meta property="og:description" content="All Remotion video templates">
+  <meta property="og:description" content="Full video templates built by combining Remotion components">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Templates">
-  <meta name="twitter:description" content="All Remotion video templates">
+  <meta name="twitter:description" content="Full video templates built by combining Remotion components">
 
   
   
@@ -205,18 +205,18 @@
     "articleSection": "Templates",
     "name": "Templates",
     "headline": "Templates",
-    "description": "All Remotion video templates",
+    "description": "Full video templates built by combining Remotion components",
     "inLanguage": "en",
     "url" : "http://localhost:1313/templates/",
     "author" : {
       "@type": "Person",
-      "name": "Remotion Templates"
+      "name": "Remotion Components"
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-04-29T00:00:00\u002b00:00",
-    "datePublished": "2025-04-29T00:00:00\u002b00:00",
     
-    "dateModified": "2025-04-29T00:00:00\u002b00:00",
+    
+    
+    
+    
     
     
     
@@ -279,13 +279,31 @@
   
   
     <a href="/" class="text-base font-medium truncate min-w-0 shrink">
-      Free Remotion Templates
+      Remotion Components
     </a>
   
   <div class="flex items-center ms-auto">
     <div class="hidden md:flex">
       <nav class="flex items-center gap-x-5 h-12">
   
+    
+      
+  
+    <a
+      href="/components/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Components"
+      title="Components">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Components
+        </span>
+      
+    </a>
+  
+
     
       
   
@@ -389,6 +407,23 @@
     
     <div class="px-2">
       <a
+        href="/components/"
+        aria-label="Components"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Components" class="text-2xl font-bold tracking-tight">
+          Components
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
         href="/templates/"
         aria-label="Templates"
         
@@ -468,148 +503,15 @@
       <main id="main-content" class="grow">
         
 
+<div style="padding-top:1.5rem; padding-bottom:4rem;">
 
+  <p class="font-semibold text-neutral-400" style="font-size:1rem; margin-bottom:2rem; max-width:600px; line-height:1.5;">
+    Full video templates built by combining multiple components — ready to drop in and customize.
+  </p>
 
-
-<style>
-  .rt-split {
-    display: flex;
-    gap: 2.5rem;
-    height: calc(100vh - 72px);
-    overflow: hidden;
-  }
-  .rt-scroll {
-    overflow-y: auto;
-    height: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .rt-scroll::-webkit-scrollbar { display: none; }
-
-  .rt-sidebar-cat {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: #71717a;
-    padding: 1.25rem 0 0.4rem;
-    cursor: pointer;
-    display: block;
-    transition: color 0.12s;
-  }
-  .rt-sidebar-cat:hover { color: #a1a1aa; }
-  .rt-sidebar-cat.active { color: #f5f5f5; }
-
-  .rt-sidebar-sub {
-    display: block;
-    font-size: 0.875rem;
-    color: #71717a;
-    padding: 3px 0 3px 12px;
-    cursor: pointer;
-    border-left: 2px solid transparent;
-    transition: color 0.12s, border-color 0.12s;
-    line-height: 1.6;
-    background: none;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    text-align: left;
-    width: 100%;
-  }
-  .rt-sidebar-sub:hover { color: #d4d4d8; }
-  .rt-sidebar-sub.active { color: #f5f5f5; border-left-color: #6366f1; }
-</style>
-
-<div class="rt-split">
-
-  
-  <aside class="rt-scroll" style="width:188px; flex-shrink:0; padding-top:1.5rem; padding-bottom:4rem;">
-
-    <button
-      onclick="rtFilter(null, null)"
-      id="rt-all-btn"
-      style="font-size:0.875rem; font-weight:600; color:#f5f5f5; background:none; border:none; cursor:pointer; padding:0; display:block; margin-bottom:0.25rem;">
-      All templates
-    </button>
-
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
     
-    
-    <span class="rt-sidebar-cat" onclick="rtFilter('text', null)" data-cat="text">text</span>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('text', 'Title Cards')"
-      data-cat="text"
-      data-sub="Title Cards">Title Cards</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('text', 'Lower Thirds')"
-      data-cat="text"
-      data-sub="Lower Thirds">Lower Thirds</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('text', 'Kinetic Type')"
-      data-cat="text"
-      data-sub="Kinetic Type">Kinetic Type</button>
-    
-    
-    
-    <span class="rt-sidebar-cat" onclick="rtFilter('transitions', null)" data-cat="transitions">transitions</span>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('transitions', 'Fade')"
-      data-cat="transitions"
-      data-sub="Fade">Fade</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('transitions', 'Wipe')"
-      data-cat="transitions"
-      data-sub="Wipe">Wipe</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('transitions', 'Mask')"
-      data-cat="transitions"
-      data-sub="Mask">Mask</button>
-    
-    
-    
-    <span class="rt-sidebar-cat" onclick="rtFilter('visual', null)" data-cat="visual">visual</span>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('visual', 'Particles')"
-      data-cat="visual"
-      data-sub="Particles">Particles</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('visual', 'Progress')"
-      data-cat="visual"
-      data-sub="Progress">Progress</button>
-    
-    <button
-      class="rt-sidebar-sub"
-      onclick="rtFilter('visual', 'Highlights')"
-      data-cat="visual"
-      data-sub="Highlights">Highlights</button>
-    
-    
-
-  </aside>
-
-  
-  <div id="rt-grid-scroll" class="rt-scroll" style="flex:1; min-width:0; padding-top:1.5rem; padding-bottom:4rem;">
-    <div id="template-grid" class="w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      
-      <div
-        data-category="text"
-        data-subcategory="Kinetic Type">
-         
+     
 
 <article
     class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
@@ -620,7 +522,7 @@
     >
         <div
             class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="animated-counter"
+            data-component="news-broadcast"
             style="pointer-events: none"
         ></div>
     </div>
@@ -631,11 +533,11 @@
         <header>
             <a
                 
-                href="/templates/text/animated-counter/"
+                href="/templates/news-broadcast/"
                 
                 class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
             >
-                <h2>Animated Counter</h2>
+                <h2>News Broadcast</h2>
             </a>
         </header>
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -681,7 +583,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>13 words</span>
+      <span>34 words</span>
     
 
     
@@ -699,20 +601,15 @@
         <div
             class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
         >
-            An animated number counter with configurable easing, formatting, and a subtle scale pop.
-
+            A broadcast-ready news format with scene cut and live ticker.
         </div>
         
     </div>
     <div class="px-6 pt-4 pb-2"></div>
 </article>
 
-      </div>
-      
-      <div
-        data-category="text"
-        data-subcategory="Title Cards">
-         
+    
+     
 
 <article
     class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
@@ -723,7 +620,7 @@
     >
         <div
             class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="animated-title"
+            data-component="product-launch"
             style="pointer-events: none"
         ></div>
     </div>
@@ -734,11 +631,11 @@
         <header>
             <a
                 
-                href="/templates/text/animated-title/"
+                href="/templates/product-launch/"
                 
                 class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
             >
-                <h2>Animated Title</h2>
+                <h2>Product Launch</h2>
             </a>
         </header>
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -784,7 +681,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span>9 words</span>
+      <span>28 words</span>
     
 
     
@@ -802,1211 +699,17 @@
         <div
             class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
         >
-            A centered title that fades and slides into place.
-
+            Minimal product reveal with animated title and badge pop.
         </div>
         
     </div>
     <div class="px-6 pt-4 pb-2"></div>
 </article>
 
-      </div>
-      
-      <div
-        data-category="visual"
-        data-subcategory="Highlights">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="badge"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
     
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/visual/badge/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Badge</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>11 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            An animated badge/pill with pop, bounce, slide, and fade entrance animations.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="transitions"
-        data-subcategory="Mask">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="circle-reveal"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/transitions/circle-reveal/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Circle Reveal</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>9 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            An expanding/collapsing circle mask transition with configurable center point.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="transitions"
-        data-subcategory="Fade">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="fade-transition"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/transitions/fade-transition/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Fade Transition</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>6 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A configurable full-screen color fade overlay.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="text"
-        data-subcategory="Kinetic Type">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="glitch-text"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/text/glitch-text/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Glitch Text</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>10 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A cyberpunk-style glitch text effect with chromatic aberration and scanlines.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="visual"
-        data-subcategory="Particles">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="particle-field"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/visual/particle-field/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Particle Field</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>11 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A physics-based particle background with float, rain, and starfield animation styles.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="visual"
-        data-subcategory="Progress">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="progress-bar"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/visual/progress-bar/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Progress Bar</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>12 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            An animated progress bar with label, percentage display, and a shimmer effect.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="text"
-        data-subcategory="Title Cards">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="reveal-text"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/text/reveal-text/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Reveal Text</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>12 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            Per-character or per-word staggered text reveal with blur, scale, and directional motion.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="visual"
-        data-subcategory="Highlights">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="spotlight"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/visual/spotlight/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Spotlight</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>12 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A moving spotlight/highlight effect with circular, horizontal, diagonal, and figure-8 motion patterns.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="text"
-        data-subcategory="Lower Thirds">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="subtitle"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/text/subtitle/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Subtitle</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>7 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A lower-third subtitle with a typewriter reveal.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="visual"
-        data-subcategory="Highlights">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="ticker"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/visual/ticker/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Ticker</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>12 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A horizontal scrolling news-style ticker tape with configurable items, speed, and direction.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-      <div
-        data-category="transitions"
-        data-subcategory="Wipe">
-         
-
-<article
-    class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"
->
-    <div
-        class="flex-none relative overflow-hidden thumbnail_card"
-        style="background: #09090b"
-    >
-        <div
-            class="rt-player-card not-prose absolute inset-0 w-full h-full"
-            data-component="wipe-transition"
-            style="pointer-events: none"
-        ></div>
-    </div>
-
-    
-
-    <div class="p-4">
-        <header>
-            <a
-                
-                href="/templates/transitions/wipe-transition/"
-                
-                class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"
-            >
-                <h2>Wipe Transition</h2>
-            </a>
-        </header>
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-            
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span>14 words</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-
-        </div>
-        
-        <div
-            class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5"
-        >
-            A directional wipe transition using CSS clip-path, supporting left, right, up, and down directions.
-
-        </div>
-        
-    </div>
-    <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-      </div>
-      
-    </div>
-    <p id="no-results" style="display:none; text-align:center; color:#6b7280; padding:3rem 0; font-size:0.95rem;">
-      No templates in this category yet.
-    </p>
   </div>
 
 </div>
-
-<script>
-const RT_STATE_KEY = 'rt-list-state';
-
-function rtFilter(cat, sub, skipSave) {
-  const allBtn = document.getElementById('rt-all-btn');
-  allBtn.style.color = (!cat && !sub) ? '#f5f5f5' : '#71717a';
-
-  document.querySelectorAll('.rt-sidebar-cat').forEach(el => {
-    el.classList.toggle('active', el.dataset.cat === cat);
-  });
-  document.querySelectorAll('.rt-sidebar-sub').forEach(el => {
-    el.classList.toggle('active', el.dataset.cat === cat && el.dataset.sub === sub);
-  });
-
-  const items = document.querySelectorAll('#template-grid [data-category]');
-  let visible = 0;
-  items.forEach(el => {
-    const show = (!cat || el.dataset.category === cat) && (!sub || el.dataset.subcategory === sub);
-    el.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-
-  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
-
-  if (!skipSave) {
-    const scrollTop = document.getElementById('rt-grid-scroll')?.scrollTop ?? 0;
-    sessionStorage.setItem(RT_STATE_KEY, JSON.stringify({ cat: cat ?? null, sub: sub ?? null, scrollTop }));
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const gridEl = document.getElementById('rt-grid-scroll');
-
-  
-  const saved = JSON.parse(sessionStorage.getItem(RT_STATE_KEY) || 'null');
-  if (saved?.cat || saved?.sub) {
-    rtFilter(saved.cat, saved.sub, true);
-  }
-  if (gridEl && saved?.scrollTop) {
-    gridEl.scrollTop = saved.scrollTop;
-  }
-
-  
-  let scrollTimer;
-  gridEl?.addEventListener('scroll', () => {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => {
-      const state = JSON.parse(sessionStorage.getItem(RT_STATE_KEY) || '{}');
-      state.scrollTop = gridEl.scrollTop;
-      sessionStorage.setItem(RT_STATE_KEY, JSON.stringify(state));
-    }, 120);
-  });
-});
-</script>
 
 
         
@@ -2040,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
           &copy;
           2026
-          Remotion Templates
+          Remotion Components
       </p>
     
 

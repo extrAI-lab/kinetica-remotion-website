@@ -139,5 +139,25 @@
       
     </item>
     
+    <item>
+      <title>News Broadcast</title>
+      <link>http://localhost:1313/templates/news-broadcast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/news-broadcast/</guid>
+      <description>A broadcast-ready news format with scene cut and live ticker.</description>
+      
+    </item>
+    
+    <item>
+      <title>Product Launch</title>
+      <link>http://localhost:1313/templates/product-launch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/templates/product-launch/</guid>
+      <description>Minimal product reveal with animated title and badge pop.</description>
+      
+    </item>
+    
   </channel>
 </rss>

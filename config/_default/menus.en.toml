@@ -4,6 +4,11 @@
   weight = 10
 
 [[main]]
+  name = "Templates"
+  pageRef = "templates"
+  weight = 15
+
+[[main]]
   name = ""
   pre = "github"
   url = "https://github.com"
