@@ -269,6 +269,32 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // Carousel items — autoplay, no controls
+  document
+    .querySelectorAll<HTMLElement>(".rt-carousel-item")
+    .forEach((container) => {
+      const componentName = container.dataset.component ?? "animated-title";
+      const config = registry[componentName];
+      if (!config) return;
+
+      createRoot(container).render(
+        <Player
+          component={config.component}
+          compositionWidth={config.width}
+          compositionHeight={config.height}
+          fps={config.fps}
+          durationInFrames={config.durationInFrames}
+          loop
+          autoPlay
+          controls={false}
+          clickToPlay={false}
+          doubleClickToFullscreen={false}
+          inputProps={config.defaultProps}
+          style={{ width: "100%", height: "100%" }}
+        />,
+      );
+    });
+
   // Card hover players
   document
     .querySelectorAll<HTMLElement>(".rt-player-card")

@@ -8,28 +8,43 @@
   </p>
 </div>
 
-<!-- Remotion combined video -->
-<div style="width:100%; aspect-ratio:16/9; max-height:72vh; border-radius:16px; overflow:hidden; border:1px solid #2a2a2a; background:#0a0a0a; margin-top:2.5rem; margin-bottom:3rem;">
-  <div id="remotion-hero" style="width:100%;height:100%;"></div>
+<!-- Carousel -->
+<style>
+  @keyframes rt-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  #rt-carousel-track {
+    animation: rt-marquee 40s linear infinite;
+  }
+</style>
+
+<div style="overflow:hidden; margin-top:2.5rem; margin-bottom:3rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
+  <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
+    {{ $items := slice "animated-title" "particle-field" "spotlight" "glitch-text" "badge" "ticker" }}
+    {{ range $items }}
+    <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+      <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+    </div>
+    {{ end }}
+    {{ range $items }}
+    <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+      <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+    </div>
+    {{ end }}
+  </div>
 </div>
 
-<!-- Featured components row -->
-<div style="margin-bottom:1.25rem; display:flex; align-items:baseline; justify-content:space-between;">
-  <p style="font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#6b7280; margin:0;">Featured components</p>
-</div>
-
-<div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" style="margin-bottom:2.5rem;">
-  {{ range first 4 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-    {{ partial "article-link/card.html" . }}
-  {{ end }}
-</div>
-
-<!-- Browse all CTA -->
-<div style="text-align:center; padding-bottom:4rem;">
+<!-- CTAs -->
+<div style="text-align:center; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; padding-bottom:4rem;">
   <a href="/components/"
      style="display:inline-flex; align-items:center; gap:0.5rem; background:#6366f1; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
-     onmouseover="this.style.background='#4f46e5'"
-     onmouseout="this.style.background='#6366f1'">
+     onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
     Browse all components →
+  </a>
+  <a href="/templates/"
+     style="display:inline-flex; align-items:center; gap:0.5rem; background:transparent; color:#e5e5e5; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; border:1px solid #3f3f46; transition:border-color 0.15s, color 0.15s;"
+     onmouseover="this.style.borderColor='#6366f1';this.style.color='#a5b4fc'" onmouseout="this.style.borderColor='#3f3f46';this.style.color='#e5e5e5'">
+    Ready to use templates →
   </a>
 </div>
