@@ -65,7 +65,7 @@
       onclick="rtFilter(null, null)"
       id="rt-all-btn"
       style="font-size:0.875rem; font-weight:600; color:#f5f5f5; background:none; border:none; cursor:pointer; padding:0; display:block; margin-bottom:0.25rem;">
-      All templates
+      All components
     </button>
 
     {{ range $sidebar }}
@@ -85,7 +85,7 @@
   <!-- Grid — own scroll -->
   <div id="rt-grid-scroll" class="rt-scroll" style="flex:1; min-width:0; padding-top:1.5rem; padding-bottom:4rem;">
     <div id="template-grid" class="w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {{ range where .Site.RegularPages "Section" "templates" }}
+      {{ range where .Site.RegularPages "Section" "components" }}
       <div
         data-category="{{ index .Params.categories 0 | default "" }}"
         data-subcategory="{{ .Params.subcategory | default "" }}">
@@ -94,7 +94,7 @@
       {{ end }}
     </div>
     <p id="no-results" style="display:none; text-align:center; color:#6b7280; padding:3rem 0; font-size:0.95rem;">
-      No templates in this category yet.
+      No components in this category yet.
     </p>
   </div>
 

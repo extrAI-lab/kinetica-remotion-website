@@ -1,140 +1,140 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Remotion Templates on Free Remotion Templates</title>
+    <title>Remotion Components</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Remotion Templates on Free Remotion Templates</description>
+    <description>Recent content on Remotion Components</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2026 Remotion Templates</copyright>
+    <copyright>© 2026 Remotion Components</copyright>
     <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Animated Counter</title>
-      <link>http://localhost:1313/templates/text/animated-counter/</link>
+      <link>http://localhost:1313/components/text/animated-counter/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/animated-counter/</guid>
+      <guid>http://localhost:1313/components/text/animated-counter/</guid>
       <description>&lt;p&gt;An animated number counter with configurable easing, formatting, and a subtle scale pop.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Animated Title</title>
-      <link>http://localhost:1313/templates/text/animated-title/</link>
+      <link>http://localhost:1313/components/text/animated-title/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/animated-title/</guid>
+      <guid>http://localhost:1313/components/text/animated-title/</guid>
       <description>&lt;p&gt;A centered title that fades and slides into place.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Badge</title>
-      <link>http://localhost:1313/templates/visual/badge/</link>
+      <link>http://localhost:1313/components/visual/badge/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/visual/badge/</guid>
+      <guid>http://localhost:1313/components/visual/badge/</guid>
       <description>&lt;p&gt;An animated badge/pill with pop, bounce, slide, and fade entrance animations.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Circle Reveal</title>
-      <link>http://localhost:1313/templates/transitions/circle-reveal/</link>
+      <link>http://localhost:1313/components/transitions/circle-reveal/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/transitions/circle-reveal/</guid>
+      <guid>http://localhost:1313/components/transitions/circle-reveal/</guid>
       <description>&lt;p&gt;An expanding/collapsing circle mask transition with configurable center point.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Fade Transition</title>
-      <link>http://localhost:1313/templates/transitions/fade-transition/</link>
+      <link>http://localhost:1313/components/transitions/fade-transition/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/transitions/fade-transition/</guid>
+      <guid>http://localhost:1313/components/transitions/fade-transition/</guid>
       <description>&lt;p&gt;A configurable full-screen color fade overlay.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Glitch Text</title>
-      <link>http://localhost:1313/templates/text/glitch-text/</link>
+      <link>http://localhost:1313/components/text/glitch-text/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/glitch-text/</guid>
+      <guid>http://localhost:1313/components/text/glitch-text/</guid>
       <description>&lt;p&gt;A cyberpunk-style glitch text effect with chromatic aberration and scanlines.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Particle Field</title>
-      <link>http://localhost:1313/templates/visual/particle-field/</link>
+      <link>http://localhost:1313/components/visual/particle-field/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/visual/particle-field/</guid>
+      <guid>http://localhost:1313/components/visual/particle-field/</guid>
       <description>&lt;p&gt;A physics-based particle background with float, rain, and starfield animation styles.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Progress Bar</title>
-      <link>http://localhost:1313/templates/visual/progress-bar/</link>
+      <link>http://localhost:1313/components/visual/progress-bar/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/visual/progress-bar/</guid>
+      <guid>http://localhost:1313/components/visual/progress-bar/</guid>
       <description>&lt;p&gt;An animated progress bar with label, percentage display, and a shimmer effect.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Reveal Text</title>
-      <link>http://localhost:1313/templates/text/reveal-text/</link>
+      <link>http://localhost:1313/components/text/reveal-text/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/reveal-text/</guid>
+      <guid>http://localhost:1313/components/text/reveal-text/</guid>
       <description>&lt;p&gt;Per-character or per-word staggered text reveal with blur, scale, and directional motion.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Spotlight</title>
-      <link>http://localhost:1313/templates/visual/spotlight/</link>
+      <link>http://localhost:1313/components/visual/spotlight/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/visual/spotlight/</guid>
+      <guid>http://localhost:1313/components/visual/spotlight/</guid>
       <description>&lt;p&gt;A moving spotlight/highlight effect with circular, horizontal, diagonal, and figure-8 motion patterns.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Subtitle</title>
-      <link>http://localhost:1313/templates/text/subtitle/</link>
+      <link>http://localhost:1313/components/text/subtitle/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/subtitle/</guid>
+      <guid>http://localhost:1313/components/text/subtitle/</guid>
       <description>&lt;p&gt;A lower-third subtitle with a typewriter reveal.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Ticker</title>
-      <link>http://localhost:1313/templates/visual/ticker/</link>
+      <link>http://localhost:1313/components/visual/ticker/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/visual/ticker/</guid>
+      <guid>http://localhost:1313/components/visual/ticker/</guid>
       <description>&lt;p&gt;A horizontal scrolling news-style ticker tape with configurable items, speed, and direction.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Wipe Transition</title>
-      <link>http://localhost:1313/templates/transitions/wipe-transition/</link>
+      <link>http://localhost:1313/components/transitions/wipe-transition/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/transitions/wipe-transition/</guid>
+      <guid>http://localhost:1313/components/transitions/wipe-transition/</guid>
       <description>&lt;p&gt;A directional wipe transition using CSS clip-path, supporting left, right, up, and down directions.&lt;/p&gt;</description>
       
     </item>

@@ -1,4 +1,4 @@
 ---
-title: "Remotion Templates"
-description: "Professional video templates built with Remotion"
+title: "Remotion Components"
+description: "Professional video components built with Remotion"
 ---

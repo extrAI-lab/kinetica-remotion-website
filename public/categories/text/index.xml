@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Text on Free Remotion Templates</title>
+    <title>Text on Remotion Components</title>
     <link>http://localhost:1313/categories/text/</link>
-    <description>Recent content in Text on Free Remotion Templates</description>
+    <description>Recent content in Text on Remotion Components</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2026 Remotion Templates</copyright>
+    <copyright>© 2026 Remotion Components</copyright>
     <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/text/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Animated Counter</title>
-      <link>http://localhost:1313/templates/text/animated-counter/</link>
+      <link>http://localhost:1313/components/text/animated-counter/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/animated-counter/</guid>
+      <guid>http://localhost:1313/components/text/animated-counter/</guid>
       <description>&lt;p&gt;An animated number counter with configurable easing, formatting, and a subtle scale pop.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Animated Title</title>
-      <link>http://localhost:1313/templates/text/animated-title/</link>
+      <link>http://localhost:1313/components/text/animated-title/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/animated-title/</guid>
+      <guid>http://localhost:1313/components/text/animated-title/</guid>
       <description>&lt;p&gt;A centered title that fades and slides into place.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Glitch Text</title>
-      <link>http://localhost:1313/templates/text/glitch-text/</link>
+      <link>http://localhost:1313/components/text/glitch-text/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/glitch-text/</guid>
+      <guid>http://localhost:1313/components/text/glitch-text/</guid>
       <description>&lt;p&gt;A cyberpunk-style glitch text effect with chromatic aberration and scanlines.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Reveal Text</title>
-      <link>http://localhost:1313/templates/text/reveal-text/</link>
+      <link>http://localhost:1313/components/text/reveal-text/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/reveal-text/</guid>
+      <guid>http://localhost:1313/components/text/reveal-text/</guid>
       <description>&lt;p&gt;Per-character or per-word staggered text reveal with blur, scale, and directional motion.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Subtitle</title>
-      <link>http://localhost:1313/templates/text/subtitle/</link>
+      <link>http://localhost:1313/components/text/subtitle/</link>
       <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/templates/text/subtitle/</guid>
+      <guid>http://localhost:1313/components/text/subtitle/</guid>
       <description>&lt;p&gt;A lower-third subtitle with a typewriter reveal.&lt;/p&gt;</description>
       
     </item>
