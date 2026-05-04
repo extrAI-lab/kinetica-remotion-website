@@ -23,6 +23,17 @@
   }
   .rt-chip { display:inline-flex; align-items:center; gap:6px; background:#18181b; border:1px solid #27272a; border-radius:6px; padding:4px 12px; font-size:0.8rem; color:#a1a1aa; font-family:system-ui,sans-serif; }
   .rt-chip-dot { width:6px; height:6px; border-radius:50%; background:#6366f1; flex-shrink:0; }
+  #rt-cmd-box { transition: border-color 0.15s, background 0.15s; }
+  #rt-cmd-box:hover { border-color: #3f3f46 !important; background: #161616 !important; }
+  #rt-cmd-box:hover code { color: #fff; }
+  #rt-snackbar {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(12px);
+    background: #27272a; color: #e5e5e5; font-size: 0.82rem; font-family: system-ui, sans-serif;
+    padding: 0.5rem 1.25rem; border-radius: 999px; border: 1px solid #3f3f46;
+    opacity: 0; transition: opacity 0.2s, transform 0.2s; pointer-events: none; z-index: 100;
+    white-space: nowrap;
+  }
+  #rt-snackbar.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 
 <article class="pb-16 pt-2">
@@ -73,17 +84,17 @@
         <p style="font-size:0.72rem; color:#71717a; margin:0 0 0.65rem 0; line-height:1.45;">
           Local preview: run from an existing project that already has <code style="font-size:0.7rem;">src/Root.tsx</code> (build the CLI with <code style="font-size:0.7rem;">pnpm build</code> in <code style="font-size:0.7rem;">cli/</code>). Production build shows <code style="font-size:0.7rem;">npx create-kinetica add …</code>.
         </p>
-        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+        <div id="rt-cmd-box" onclick="rtCopyCmd(this)" style="display:flex;align-items:center;gap:0.75rem;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:8px;padding:0.6rem 0.75rem;cursor:pointer;" title="Click to copy">
           <span style="width:28px;height:28px;background:#27272a;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:900;color:#e5e5e5;">&gt;_</span>
-          <code class="text-sm text-neutral-200" style="word-break:break-all;">node "{{ $rtKineticaLocalRoot }}/cli/dist/index.js" add {{ $slug }}</code>
+          <code class="text-sm text-neutral-200" style="word-break:break-all;flex:1;">node "{{ $rtKineticaLocalRoot }}/cli/dist/index.js" add {{ $slug }}</code>
         </div>
         {{ else }}
         <p style="font-size:0.72rem; color:#71717a; margin:0 0 0.65rem 0; line-height:1.45;">
           Run from a Kinetica / Remotion project that already has <code style="font-size:0.7rem;">src/Root.tsx</code>.
         </p>
-        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+        <div id="rt-cmd-box" onclick="rtCopyCmd(this)" style="display:flex;align-items:center;gap:0.75rem;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:8px;padding:0.6rem 0.75rem;cursor:pointer;" title="Click to copy">
           <span style="width:28px;height:28px;background:#cc3534;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:900;color:white;">n</span>
-          <code class="text-sm text-neutral-200" style="word-break:break-all;">npx create-kinetica add {{ $slug }}</code>
+          <code class="text-sm text-neutral-200" style="word-break:break-all;flex:1;">npx create-kinetica add {{ $slug }}</code>
         </div>
         {{ end }}
       </div>
@@ -123,4 +134,14 @@
   </div>
 
 </article>
+
+<div id="rt-snackbar">Copied to clipboard</div>
+<script>
+function rtCopyCmd(box) {
+  navigator.clipboard.writeText(box.querySelector('code').textContent);
+  var sb = document.getElementById('rt-snackbar');
+  sb.classList.add('show');
+  setTimeout(function () { sb.classList.remove('show'); }, 1500);
+}
+</script>
 {{ end }}
