@@ -1,5 +1,5 @@
 ---
-title: "Contribute a Scene"
-description: "How to add a new scene to kinetica"
+title: "Contribute a Component"
+description: "How to add a new component to kinetica"
 layout: "contribute"
 ---

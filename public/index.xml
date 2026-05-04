@@ -11,20 +11,20 @@
     
     <item>
       <title>Terminal 3D</title>
-      <link>http://localhost:1313/scenes/terminal-3d/</link>
+      <link>http://localhost:1313/components/terminal-3d/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/scenes/terminal-3d/</guid>
-      <description>A cinematic 3D terminal scene with typewriter output and spatial camera movement.</description>
+      <guid>http://localhost:1313/components/terminal-3d/</guid>
+      <description>A cinematic 3D terminal component with typewriter output and spatial camera movement.</description>
       
     </item>
     
     <item>
       <title>Transform 3D Showcase</title>
-      <link>http://localhost:1313/scenes/transform3d-showcase/</link>
+      <link>http://localhost:1313/components/transform3d-showcase/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/scenes/transform3d-showcase/</guid>
+      <guid>http://localhost:1313/components/transform3d-showcase/</guid>
       <description>A showcase of the Transform3D API with orbiting elements, SLERP interpolation, and composable matrix transforms.</description>
       
     </item>

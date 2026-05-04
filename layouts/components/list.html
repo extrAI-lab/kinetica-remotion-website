@@ -70,7 +70,7 @@
 <div style="padding-top:1.5rem; padding-bottom:6rem;">
 
   <p class="font-semibold text-neutral-400" style="font-size:1rem; margin-bottom:2rem; max-width:600px; line-height:1.5;">
-    Production-ready 3D compositions — select one or more scenes, then get the install command.
+    Production-ready 3D compositions — select one or more components, then get the install command.
   </p>
 
   <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
@@ -162,7 +162,7 @@
 
   function updateBar() {
     const n = selected.size;
-    document.getElementById('rt-count').textContent = n === 1 ? '1 scene selected' : `${n} scenes selected`;
+    document.getElementById('rt-count').textContent = n === 1 ? '1 component selected' : `${n} components selected`;
     document.getElementById('rt-bar').classList.toggle('show', n > 0);
   }
 

@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/components/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/contribute/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/scenes/</loc>
+    <loc>http://localhost:1313/components/terminal-3d/</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/scenes/terminal-3d/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/scenes/transform3d-showcase/</loc>
+    <loc>http://localhost:1313/components/transform3d-showcase/</loc>
   </url>
 </urlset>

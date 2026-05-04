@@ -43,19 +43,19 @@
 <div style="max-width: 720px; padding-top: 2rem; padding-bottom: 6rem;">
 
   <h1 style="font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 800; color: #f5f5f5; margin: 0 0 0.75rem;">
-    Contribute a scene
+    Contribute a component
   </h1>
   <p style="font-size: 1rem; color: #a1a1aa; line-height: 1.6; margin-bottom: 2.5rem;">
-    A scene is a self-contained Remotion composition — users install one or more and they are sequenced automatically into a single video. Follow the steps below to get yours merged.
+    A component is a self-contained Remotion composition — users install one or more and they are sequenced automatically into a single video. Follow the steps below to get yours merged.
   </p>
 
   <!-- Steps -->
   <div class="ct-step">
     <div class="ct-num">1</div>
     <div>
-      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Copy the scene template</h2>
+      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Copy the component template</h2>
       <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
-        Copy <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/_template/</code> and rename it to your scene slug (kebab-case).
+        Copy <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/_template/</code> and rename it to your component slug (kebab-case).
       </p>
       <div class="ct-file-tree">src/scenes/my-scene/<br>
 ├── MyScene.tsx<span style="color:#52525b;">          # main component</span><br>
@@ -102,7 +102,7 @@ export const mySceneDefaults: MySceneProps = {
     <div>
       <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Add the manifest entry</h2>
       <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
-        Add your scene to <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/manifest.json</code>. The <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">defaultProps</code> must exactly match your <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">*Defaults</code> export.
+        Add your component to <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/manifest.json</code>. The <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">defaultProps</code> must exactly match your <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">*Defaults</code> export.
       </p>
       <div class="ct-code">{
   "my-scene": {
@@ -141,12 +141,12 @@ export const mySceneDefaults: MySceneProps = {
 
   <div class="ct-rule">
     <h3>Self-contained</h3>
-    <p>A scene must not import from other scenes. Any shared animation logic must be inlined as a private local function within the scene file.</p>
+    <p>A component must not import from other components. Any shared animation logic must be inlined as a private local function within the component file.</p>
   </div>
 
   <div class="ct-rule">
     <h3>Preview render</h3>
-    <p>A <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">preview.png</code> (first frame) lives in the scene folder and is committed with the PR.</p>
+    <p>A <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">preview.png</code> (first frame) lives in the component folder and is committed with the PR.</p>
   </div>
 
   <div class="ct-rule">

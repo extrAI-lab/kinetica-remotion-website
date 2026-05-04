@@ -9,7 +9,7 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = false
 
-mainSections = ["scenes"]
+mainSections = ["components"]
 thumbnailAspectRatio = "1.77"
 
 disableImageOptimization = false

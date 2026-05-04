@@ -284,15 +284,15 @@
       
   
     <a
-      href="/scenes/"
+      href="/components/"
       
       class="flex items-center bf-icon-color-hover"
-      aria-label="Scenes"
-      title="Scenes">
+      aria-label="Components"
+      title="Components">
       
       
         <span class="text-base font-medium break-normal">
-          Scenes
+          Components
         </span>
       
     </a>
@@ -401,13 +401,13 @@
     
     <div class="px-2">
       <a
-        href="/scenes/"
-        aria-label="Scenes"
+        href="/components/"
+        aria-label="Components"
         
         class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
         
-        <span title="Scenes" class="text-2xl font-bold tracking-tight">
-          Scenes
+        <span title="Components" class="text-2xl font-bold tracking-tight">
+          Components
         </span>
         
       </a>
@@ -501,10 +501,10 @@
     
 <div class="pb-10 text-center" style="padding-top:16px;">
   <h1 class="font-extrabold tracking-tight text-neutral-100" style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; max-width:960px; margin:0 auto 1rem;">
-    Self-contained Remotion scenes, ready to install and ship.
+    Self-contained Remotion components, ready to install and ship.
   </h1>
   <p class="font-semibold text-neutral-400" style="font-size:clamp(1rem,2vw,1.4rem); max-width:780px; margin:0 auto; line-height:1.5;">
-    Pick one or more scenes, run a single CLI command, get a ready-to-render Remotion project.
+    Pick one or more components, run a single CLI command, get a ready-to-render Remotion project.
   </p>
 </div>
 
@@ -577,10 +577,10 @@
 
 
 <div style="text-align:center; padding-bottom:4rem;">
-  <a href="/scenes/"
+  <a href="/components/"
      style="display:inline-flex; align-items:center; gap:0.5rem; background:#6366f1; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
      onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
-    Browse scenes →
+    Browse components →
   </a>
 </div>
 
@@ -639,7 +639,7 @@
 <script>
 (function () {
   var path = window.location.pathname;
-  var map = { '/scenes': '/scenes/', '/contribute': '/contribute/' };
+  var map = { '/components': '/components/', '/contribute': '/contribute/' };
   Object.keys(map).forEach(function (prefix) {
     if (path.startsWith(prefix)) {
       document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {

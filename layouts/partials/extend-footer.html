@@ -2,7 +2,7 @@
 <script>
 (function () {
   var path = window.location.pathname;
-  var map = { '/scenes': '/scenes/', '/contribute': '/contribute/' };
+  var map = { '/components': '/components/', '/contribute': '/contribute/' };
   Object.keys(map).forEach(function (prefix) {
     if (path.startsWith(prefix)) {
       document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {
