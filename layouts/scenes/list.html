@@ -1,4 +1,16 @@
 {{ define "main" }}
+{{- $rtKineticaLocalRoot := "" -}}
+{{- if hugo.IsServer -}}
+  {{- $raw := "" -}}
+  {{- with site.Params.createKineticaLocalRoot }}{{ $raw = . }}{{ end -}}
+  {{- if not $raw }}{{ with getenv "REMOTION_COMPONENTS_ROOT" }}{{ $raw = . }}{{ end }}{{ end -}}
+  {{- if not $raw -}}
+    {{- with getenv "PWD" }}{{ $raw = path.Join . "../remotion-components" }}{{ else }}{{ $raw = "../remotion-components" }}{{ end -}}
+  {{- else if and (getenv "PWD") (not (strings.HasPrefix $raw "/")) -}}
+    {{- $raw = path.Join (getenv "PWD") $raw -}}
+  {{- end -}}
+  {{- $rtKineticaLocalRoot = path.Clean $raw -}}
+{{- end -}}
 <style>
   .rt-scene-wrap { position: relative; cursor: pointer; border-radius: 10px; }
   .rt-check {
@@ -106,8 +118,13 @@
     <!-- Command -->
     <div style="margin-bottom:1.5rem;">
       <label style="display:block; font-size:0.75rem; font-weight:600; color:#71717a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">CLI command</label>
+      {{ if hugo.IsServer }}
+      <p style="font-size:0.78rem; color:#71717a; margin:0 0 0.65rem 0; line-height:1.45;">
+        Local preview: command uses an absolute path to your checkout so you can run it from any directory (build the CLI with <code style="font-size:0.76rem;">pnpm build</code> in <code style="font-size:0.76rem;">cli/</code>). A production build shows <code style="font-size:0.76rem;">npx create-kinetica …</code>.
+      </p>
+      {{ end }}
       <div class="rt-cmd-block">
-        <code id="rt-cmd-text" style="font-size:0.82rem; color:#e5e5e5; font-family:monospace; flex:1; word-break:break-all;"></code>
+        <code id="rt-cmd-text" style="font-size:0.82rem; color:#e5e5e5; font-family:monospace; flex:1; word-break:break-all; white-space:pre-wrap;"></code>
         <button id="rt-copy-btn" onclick="rtCopy()"
           style="background:#27272a; border:none; color:#a1a1aa; font-size:0.75rem; padding:4px 12px; border-radius:6px; cursor:pointer; flex-shrink:0; font-family:system-ui,sans-serif; transition:color 0.15s;"
           onmouseover="this.style.color='#e5e5e5'" onmouseout="this.style.color='#a1a1aa'">
@@ -125,6 +142,11 @@
 
 <script>
 (function () {
+  window.__RT_CREATE_KINETICA__ = {
+    mode: {{ if hugo.IsServer }}"local"{{ else }}"npx"{{ end }},
+    localRoot: {{ if hugo.IsServer }}{{ $rtKineticaLocalRoot | jsonify | safeJS }}{{ else }}""{{ end }}
+  };
+
   const selected = new Set();
 
   document.querySelectorAll('.rt-scene-wrap').forEach(wrap => {
@@ -147,7 +169,16 @@
   function buildCmd() {
     const name = document.getElementById('rt-project-input').value.trim() || 'my-video';
     const ids = Array.from(selected).join(' ');
-    return `npx create-kinetica install ${ids} --name ${name}`;
+    const nameQ = JSON.stringify(name);
+    const cfg = window.__RT_CREATE_KINETICA__;
+    let install;
+    if (cfg && cfg.mode === 'local' && cfg.localRoot) {
+      const root = cfg.localRoot.replace(/\/$/, '');
+      install = `node "${root}/cli/dist/index.js" install ${ids} --name ${nameQ}`;
+    } else {
+      install = `npx create-kinetica install ${ids} --name ${nameQ}`;
+    }
+    return `${install} &&\n  cd ${nameQ} &&\n  pnpm install &&\n  pnpm dev`;
   }
 
   window.rtUpdateCmd = function () {
