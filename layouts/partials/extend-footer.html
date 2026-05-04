@@ -1,10 +1,15 @@
 <script src="/js/remotion-components.js"></script>
 <script>
 (function () {
-  if (!window.location.pathname.startsWith('/scenes')) return;
-  document.querySelectorAll('a[href="/scenes/"]').forEach(function (a) {
-    a.style.color = '#6366f1';
-    a.style.fontWeight = '700';
+  var path = window.location.pathname;
+  var map = { '/scenes': '/scenes/', '/contribute': '/contribute/' };
+  Object.keys(map).forEach(function (prefix) {
+    if (path.startsWith(prefix)) {
+      document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {
+        a.style.color = '#6366f1';
+        a.style.fontWeight = '700';
+      });
+    }
   });
 })();
 </script>

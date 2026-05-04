@@ -1,0 +1,165 @@
+{{ define "main" }}
+<style>
+  .ct-step {
+    display: flex; gap: 1.25rem; align-items: flex-start; margin-bottom: 2rem;
+  }
+  .ct-num {
+    flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%;
+    background: #6366f1; color: #fff; font-weight: 700; font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ct-rule {
+    border: 1px solid #27272a; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem;
+  }
+  .ct-rule h3 { font-size: 0.95rem; font-weight: 700; color: #f5f5f5; margin: 0 0 0.4rem; }
+  .ct-rule p  { font-size: 0.875rem; color: #a1a1aa; margin: 0; line-height: 1.55; }
+  .ct-code {
+    background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 8px;
+    padding: 0.75rem 1rem; font-family: monospace; font-size: 0.82rem;
+    color: #e5e5e5; white-space: pre; overflow-x: auto; margin: 0.75rem 0 0;
+  }
+  .ct-file-tree {
+    background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 8px;
+    padding: 1rem 1.25rem; font-family: monospace; font-size: 0.82rem;
+    color: #a1a1aa; line-height: 1.8; margin-top: 0.75rem;
+  }
+  .ct-badge {
+    display: inline-block; background: #27272a; border: 1px solid #3f3f46;
+    border-radius: 6px; padding: 2px 10px; font-size: 0.78rem; color: #a1a1aa;
+    font-family: monospace; margin: 2px 4px 2px 0;
+  }
+  .ct-section-title {
+    font-size: 1.1rem; font-weight: 700; color: #f5f5f5; margin: 2.5rem 0 1rem;
+  }
+  .ct-cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: #6366f1; color: #fff; font-weight: 600; font-size: 0.95rem;
+    padding: 0.65rem 1.75rem; border-radius: 999px; text-decoration: none;
+    transition: background 0.15s;
+  }
+  .ct-cta:hover { background: #4f46e5; }
+</style>
+
+<div style="max-width: 720px; padding-top: 2rem; padding-bottom: 6rem;">
+
+  <h1 style="font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 800; color: #f5f5f5; margin: 0 0 0.75rem;">
+    Contribute a scene
+  </h1>
+  <p style="font-size: 1rem; color: #a1a1aa; line-height: 1.6; margin-bottom: 2.5rem;">
+    A scene is a self-contained Remotion composition — users install one or more and they are sequenced automatically into a single video. Follow the steps below to get yours merged.
+  </p>
+
+  <!-- Steps -->
+  <div class="ct-step">
+    <div class="ct-num">1</div>
+    <div>
+      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Copy the scene template</h2>
+      <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
+        Copy <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/_template/</code> and rename it to your scene slug (kebab-case).
+      </p>
+      <div class="ct-file-tree">src/scenes/my-scene/<br>
+├── MyScene.tsx<span style="color:#52525b;">          # main component</span><br>
+├── schema.ts<span style="color:#52525b;">            # Zod schema + defaults</span><br>
+├── index.ts<span style="color:#52525b;">             # re-exports</span><br>
+└── preview.png<span style="color:#52525b;">          # first-frame render</span></div>
+    </div>
+  </div>
+
+  <div class="ct-step">
+    <div class="ct-num">2</div>
+    <div>
+      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Define the prop schema</h2>
+      <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
+        Every visual property (color, text, size, speed) must be a Zod-validated prop with a default. No hardcoded values inside the component.
+      </p>
+      <div class="ct-code">// schema.ts
+export const mySceneSchema = z.object({
+  backgroundColor: z.string().default('#020617'),
+  text: z.string(),
+});
+
+export const mySceneDefaults: MySceneProps = {
+  backgroundColor: '#020617',
+  color: '#f8fafc',
+  text: 'Hello',
+};</div>
+    </div>
+  </div>
+
+  <div class="ct-step">
+    <div class="ct-num">3</div>
+    <div>
+      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Generate the preview</h2>
+      <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
+        Run the render command to produce <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">preview.png</code> and commit it with your PR.
+      </p>
+      <div class="ct-code">pnpm render:preview my-scene</div>
+    </div>
+  </div>
+
+  <div class="ct-step">
+    <div class="ct-num">4</div>
+    <div>
+      <h2 style="font-size:1rem; font-weight:700; color:#f5f5f5; margin:0.1rem 0 0.5rem;">Add the manifest entry</h2>
+      <p style="font-size:0.875rem; color:#a1a1aa; line-height:1.55; margin:0 0 0.5rem;">
+        Add your scene to <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/manifest.json</code>. The <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">defaultProps</code> must exactly match your <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">*Defaults</code> export.
+      </p>
+      <div class="ct-code">{
+  "my-scene": {
+    "title": "My Scene",
+    "description": "One sentence describing what it looks like.",
+    "durationInFrames": 120,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "componentName": "MyScene",
+    "schemaName": "mySceneSchema",
+    "defaultsName": "mySceneDefaults",
+    "defaultProps": { /* copy from your *Defaults export */ },
+    "files": [
+      "src/scenes/my-scene/MyScene.tsx",
+      "src/scenes/my-scene/schema.ts",
+      "src/scenes/my-scene/index.ts"
+    ]
+  }
+}</div>
+    </div>
+  </div>
+
+  <!-- Rules -->
+  <p class="ct-section-title">Acceptance checklist</p>
+
+  <div class="ct-rule">
+    <h3>Prop schema</h3>
+    <p><code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">schema.ts</code> defines a Zod schema with every visual property exposed as a prop. No hardcoded colors, strings, or sizes.</p>
+  </div>
+
+  <div class="ct-rule">
+    <h3>Demo data</h3>
+    <p><code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">schema.ts</code> exports a <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">*Defaults</code> object with realistic values that produce a good-looking preview without any edits — all props must be present, no undefined optional fields.</p>
+  </div>
+
+  <div class="ct-rule">
+    <h3>Self-contained</h3>
+    <p>A scene must not import from other scenes. Any shared animation logic must be inlined as a private local function within the scene file.</p>
+  </div>
+
+  <div class="ct-rule">
+    <h3>Preview render</h3>
+    <p>A <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">preview.png</code> (first frame) lives in the scene folder and is committed with the PR.</p>
+  </div>
+
+  <div class="ct-rule">
+    <h3>Manifest entry</h3>
+    <p><code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">src/scenes/manifest.json</code> has an entry with the correct <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">files</code>, <code style="color:#e5e5e5; background:#27272a; padding:1px 6px; border-radius:4px;">defaultProps</code>, and metadata.</p>
+  </div>
+
+  <!-- CTA -->
+  <div style="margin-top: 3rem;">
+    <a href="https://github.com/extrAI-lab/remotion-components" target="_blank" rel="noopener" class="ct-cta">
+      Open a PR on GitHub →
+    </a>
+  </div>
+
+</div>
+{{ end }}

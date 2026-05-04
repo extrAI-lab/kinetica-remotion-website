@@ -308,7 +308,25 @@
       
   
     <a
-      href="https://github.com"
+      href="/contribute/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contribute"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contribute
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="https://github.com/extrAI-lab/remotion-components"
       
         target="_blank"
       
@@ -406,7 +424,24 @@
     
     <div class="px-2">
       <a
-        href="https://github.com"
+        href="/contribute/"
+        aria-label="Contribute"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Contribute
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="https://github.com/extrAI-lab/remotion-components"
         aria-label="github"
         
           target="_blank"
@@ -683,10 +718,15 @@
     <script src="/js/remotion-components.js"></script>
 <script>
 (function () {
-  if (!window.location.pathname.startsWith('/scenes')) return;
-  document.querySelectorAll('a[href="/scenes/"]').forEach(function (a) {
-    a.style.color = '#6366f1';
-    a.style.fontWeight = '700';
+  var path = window.location.pathname;
+  var map = { '/scenes': '/scenes/', '/contribute': '/contribute/' };
+  Object.keys(map).forEach(function (prefix) {
+    if (path.startsWith(prefix)) {
+      document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {
+        a.style.color = '#6366f1';
+        a.style.fontWeight = '700';
+      });
+    }
   });
 })();
 </script>
