@@ -6,7 +6,6 @@ tags: ["3d", "terminal", "code", "developer"]
 component: "terminal-3d"
 durationInFrames: 300
 uses: ["Scene3D", "StaggeredMotion", "Terminal3D"]
-npm: "npx jsrepo add @extrai-lab/kinetica-remotion/terminal-3d"
 github: "https://github.com/extrAI-lab/remotion-components/tree/feat/init/src/scenes/terminal-3d"
 ---
 

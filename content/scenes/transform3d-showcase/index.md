@@ -6,7 +6,6 @@ tags: ["3d", "transform", "api", "showcase"]
 component: "transform3d-showcase"
 durationInFrames: 600
 uses: ["Transform3D", "Element3D", "StaggeredMotion"]
-npm: "npx jsrepo add @extrai-lab/kinetica-remotion/transform3d-showcase"
 github: "https://github.com/extrAI-lab/remotion-components/tree/feat/init/src/scenes/transform3d-showcase"
 ---
 

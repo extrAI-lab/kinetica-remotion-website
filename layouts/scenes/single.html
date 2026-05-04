@@ -1,4 +1,16 @@
 {{ define "main" }}
+{{- $rtKineticaLocalRoot := "" -}}
+{{- if hugo.IsServer -}}
+  {{- $raw := "" -}}
+  {{- with site.Params.createKineticaLocalRoot }}{{ $raw = . }}{{ end -}}
+  {{- if not $raw }}{{ with getenv "REMOTION_COMPONENTS_ROOT" }}{{ $raw = . }}{{ end }}{{ end -}}
+  {{- if not $raw -}}
+    {{- with getenv "PWD" }}{{ $raw = path.Join . "../remotion-components" }}{{ else }}{{ $raw = "../remotion-components" }}{{ end -}}
+  {{- else if and (getenv "PWD") (not (strings.HasPrefix $raw "/")) -}}
+    {{- $raw = path.Join (getenv "PWD") $raw -}}
+  {{- end -}}
+  {{- $rtKineticaLocalRoot = path.Clean $raw -}}
+{{- end -}}
 <style>
   .rt-preview {
     position: relative;
@@ -49,17 +61,31 @@
       </div>
     </div>
 
-    <!-- RIGHT: install + actions + chips -->
+    <!-- RIGHT: add CLI + actions + chips -->
     <div style="display: flex; flex-direction: column; gap: 0.75rem;">
 
-      <!-- Install command -->
-      {{ with .Params.npm }}
+      <!-- Add scene (existing project): local server uses built CLI; production uses npx create-kinetica -->
+      {{ with .Params.component }}
+      {{- $slug := . -}}
       <div class="rounded-xl border border-neutral-700 p-4" style="background: #1e1e1e;">
-        <p class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">Install</p>
+        <p class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">Add to project</p>
+        {{ if and hugo.IsServer $rtKineticaLocalRoot }}
+        <p style="font-size:0.72rem; color:#71717a; margin:0 0 0.65rem 0; line-height:1.45;">
+          Local preview: run from an existing project that already has <code style="font-size:0.7rem;">src/Root.tsx</code> (build the CLI with <code style="font-size:0.7rem;">pnpm build</code> in <code style="font-size:0.7rem;">cli/</code>). Production build shows <code style="font-size:0.7rem;">npx create-kinetica add …</code>.
+        </p>
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="width:28px;height:28px;background:#27272a;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:900;color:#e5e5e5;">&gt;_</span>
+          <code class="text-sm text-neutral-200" style="word-break:break-all;">node "{{ $rtKineticaLocalRoot }}/cli/dist/index.js" add {{ $slug }}</code>
+        </div>
+        {{ else }}
+        <p style="font-size:0.72rem; color:#71717a; margin:0 0 0.65rem 0; line-height:1.45;">
+          Run from a Kinetica / Remotion project that already has <code style="font-size:0.7rem;">src/Root.tsx</code>.
+        </p>
         <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
           <span style="width:28px;height:28px;background:#cc3534;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:900;color:white;">n</span>
-          <code class="text-sm text-neutral-200" style="word-break:break-all;">{{ . }}</code>
+          <code class="text-sm text-neutral-200" style="word-break:break-all;">npx create-kinetica add {{ $slug }}</code>
         </div>
+        {{ end }}
       </div>
       {{ end }}
 
