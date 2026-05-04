@@ -2,42 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { Player, PlayerRef } from "@remotion/player";
 import {
-  // Text
-  AnimatedTitle,
-  animatedTitleDefaults,
-  Subtitle,
-  subtitleDefaults,
-  AnimatedCounter,
-  animatedCounterDefaults,
-  RevealText,
-  revealTextDefaults,
-  GlitchText,
-  glitchTextDefaults,
-  // Transitions
-  FadeTransition,
-  fadeTransitionDefaults,
-  WipeTransition,
-  wipeTransitionDefaults,
-  CircleReveal,
-  circleRevealDefaults,
-  // Visual
-  ParticleField,
-  particleFieldDefaults,
-  ProgressBar,
-  progressBarDefaults,
-  Spotlight,
-  spotlightDefaults,
-  Ticker,
-  tickerDefaults,
-  Badge,
-  badgeDefaults,
-  // Templates
-  NewsBroadcastTemplate,
-  newsBroadcastDefaults,
-  ProductLaunchTemplate,
-  productLaunchDefaults,
+  Terminal3DScene,
+  terminal3DSceneDefaults,
+  Transform3DShowcaseScene,
+  transform3DShowcaseSceneDefaults,
 } from "@extrai-lab/kinetica-remotion";
-import { CombinedShowcase } from "./CombinedShowcase";
 
 // The remotion-components package is built against React 19 types which include
 // Promise<ReactNode>. The Vite project uses React 18, so we cast to avoid
@@ -55,144 +24,23 @@ type ComponentConfig = {
 };
 
 const registry: Record<string, ComponentConfig> = {
-  // Text
-  "animated-title": {
-    component: AnimatedTitle as AnyComponent,
+  "terminal-3d": {
+    component: Terminal3DScene as AnyComponent,
     width: 1920,
     height: 1080,
     fps: 30,
-    durationInFrames: 45,
-    posterFrame: 25,
-    defaultProps: animatedTitleDefaults as Record<string, unknown>,
+    durationInFrames: 300,
+    posterFrame: 80,
+    defaultProps: terminal3DSceneDefaults as Record<string, unknown>,
   },
-  subtitle: {
-    component: Subtitle as AnyComponent,
+  "transform3d-showcase": {
+    component: Transform3DShowcaseScene as AnyComponent,
     width: 1920,
     height: 1080,
     fps: 30,
-    durationInFrames: 90,
-    posterFrame: 45,
-    defaultProps: subtitleDefaults as Record<string, unknown>,
-  },
-  "animated-counter": {
-    component: AnimatedCounter as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 45,
-    posterFrame: 25,
-    defaultProps: animatedCounterDefaults as Record<string, unknown>,
-  },
-  "reveal-text": {
-    component: RevealText as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 30,
-    defaultProps: revealTextDefaults as Record<string, unknown>,
-  },
-  "glitch-text": {
-    component: GlitchText as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 20,
-    defaultProps: glitchTextDefaults as Record<string, unknown>,
-  },
-  // Transitions
-  "fade-transition": {
-    component: FadeTransition as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 45,
-    posterFrame: 22,
-    defaultProps: fadeTransitionDefaults as Record<string, unknown>,
-  },
-  "wipe-transition": {
-    component: WipeTransition as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 30,
-    posterFrame: 15,
-    defaultProps: wipeTransitionDefaults as Record<string, unknown>,
-  },
-  "circle-reveal": {
-    component: CircleReveal as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 45,
-    posterFrame: 25,
-    defaultProps: circleRevealDefaults as Record<string, unknown>,
-  },
-  // Visual
-  "particle-field": {
-    component: ParticleField as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 45,
-    defaultProps: particleFieldDefaults as Record<string, unknown>,
-  },
-  "progress-bar": {
-    component: ProgressBar as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 60,
-    posterFrame: 30,
-    defaultProps: progressBarDefaults as Record<string, unknown>,
-  },
-  spotlight: {
-    component: Spotlight as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 45,
-    defaultProps: spotlightDefaults as Record<string, unknown>,
-  },
-  ticker: {
-    component: Ticker as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 45,
-    defaultProps: tickerDefaults as Record<string, unknown>,
-  },
-  badge: {
-    component: Badge as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 90,
-    posterFrame: 15,
-    defaultProps: badgeDefaults as Record<string, unknown>,
-  },
-  // Full templates
-  "news-broadcast": {
-    component: NewsBroadcastTemplate as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 210,
-    posterFrame: 50,
-    defaultProps: newsBroadcastDefaults as Record<string, unknown>,
-  },
-  "product-launch": {
-    component: ProductLaunchTemplate as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 180,
-    posterFrame: 50,
-    defaultProps: productLaunchDefaults as Record<string, unknown>,
+    durationInFrames: 600,
+    posterFrame: 150,
+    defaultProps: transform3DShowcaseSceneDefaults as Record<string, unknown>,
   },
 };
 
@@ -249,31 +97,11 @@ const HoverPlayer: React.FC<HoverPlayerProps> = ({
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Homepage hero — combined autoplay loop
-  const heroEl = document.getElementById("remotion-hero");
-  if (heroEl) {
-    createRoot(heroEl).render(
-      <Player
-        component={CombinedShowcase}
-        compositionWidth={1920}
-        compositionHeight={1080}
-        fps={30}
-        durationInFrames={270}
-        loop
-        autoPlay
-        controls={false}
-        clickToPlay={false}
-        doubleClickToFullscreen={false}
-        style={{ width: "100%", height: "100%" }}
-      />,
-    );
-  }
-
   // Carousel items — autoplay, no controls
   document
     .querySelectorAll<HTMLElement>(".rt-carousel-item")
     .forEach((container) => {
-      const componentName = container.dataset.component ?? "animated-title";
+      const componentName = container.dataset.component ?? "terminal-3d";
       const config = registry[componentName];
       if (!config) return;
 
@@ -299,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll<HTMLElement>(".rt-player-card")
     .forEach((container) => {
-      const componentName = container.dataset.component ?? "animated-title";
+      const componentName = container.dataset.component ?? "terminal-3d";
       const config = registry[componentName];
       if (!config) return;
 
@@ -307,10 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
       createRoot(container).render(<HoverPlayer {...config} cardEl={cardEl} />);
     });
 
-  // Single template page — autoplay preview
+  // Single scene page — autoplay preview
   const singleEl = document.getElementById("remotion-single-preview");
   if (singleEl) {
-    const name = singleEl.dataset.component ?? "animated-title";
+    const name = singleEl.dataset.component ?? "terminal-3d";
     const config = registry[name];
     if (config) {
       createRoot(singleEl).render(

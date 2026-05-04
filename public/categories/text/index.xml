@@ -7,57 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Remotion Components</copyright>
-    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/text/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Animated Counter</title>
-      <link>http://localhost:1313/components/text/animated-counter/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/components/text/animated-counter/</guid>
-      <description>&lt;p&gt;An animated number counter with configurable easing, formatting, and a subtle scale pop.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Animated Title</title>
-      <link>http://localhost:1313/components/text/animated-title/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/components/text/animated-title/</guid>
-      <description>&lt;p&gt;A centered title that fades and slides into place.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Glitch Text</title>
-      <link>http://localhost:1313/components/text/glitch-text/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/components/text/glitch-text/</guid>
-      <description>&lt;p&gt;A cyberpunk-style glitch text effect with chromatic aberration and scanlines.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Reveal Text</title>
-      <link>http://localhost:1313/components/text/reveal-text/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/components/text/reveal-text/</guid>
-      <description>&lt;p&gt;Per-character or per-word staggered text reveal with blur, scale, and directional motion.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Subtitle</title>
-      <link>http://localhost:1313/components/text/subtitle/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/components/text/subtitle/</guid>
-      <description>&lt;p&gt;A lower-third subtitle with a typewriter reveal.&lt;/p&gt;</description>
-      
-    </item>
+    <atom:link href="http://localhost:1313/categories/text/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

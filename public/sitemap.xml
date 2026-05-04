@@ -3,72 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/components/text/animated-counter/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/text/animated-title/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/visual/badge/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/transitions/circle-reveal/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/transitions/fade-transition/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/text/glitch-text/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/visual/particle-field/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/visual/progress-bar/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/components/text/reveal-text/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/scenes/</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/components/visual/spotlight/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/scenes/terminal-3d/</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/components/text/subtitle/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/visual/ticker/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/components/transitions/wipe-transition/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/templates/news-broadcast/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/templates/product-launch/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/templates/</loc>
+    <loc>http://localhost:1313/scenes/transform3d-showcase/</loc>
   </url>
 </urlset>

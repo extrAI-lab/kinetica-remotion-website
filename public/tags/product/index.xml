@@ -9,15 +9,5 @@
     <copyright>© 2026 Remotion Components</copyright>
     <atom:link href="http://localhost:1313/tags/product/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Product Launch</title>
-      <link>http://localhost:1313/templates/product-launch/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/templates/product-launch/</guid>
-      <description>Minimal product reveal with animated title and badge pop.</description>
-      
-    </item>
-    
   </channel>
 </rss>

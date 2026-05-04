@@ -1,12 +1,7 @@
 [[main]]
-  name = "Components"
-  pageRef = "components"
+  name = "Scenes"
+  pageRef = "scenes"
   weight = 10
-
-[[main]]
-  name = "Templates"
-  pageRef = "templates"
-  weight = 15
 
 [[main]]
   name = ""

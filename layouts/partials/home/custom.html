@@ -1,13 +1,3 @@
-<!-- Hero -->
-<div class="pb-10 text-center" style="padding-top:16px;">
-  <h1 class="font-extrabold tracking-tight text-neutral-100" style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; max-width:960px; margin:0 auto 1rem;">
-    Professional, ready-to-use animation components built with Remotion.
-  </h1>
-  <p class="font-semibold text-neutral-400" style="font-size:clamp(1rem,2vw,1.4rem); max-width:780px; margin:0 auto; line-height:1.5;">
-    Download, customize, and ship your next video project in minutes.
-  </p>
-</div>
-
 <!-- Carousel -->
 <style>
   @keyframes rt-marquee {
@@ -19,9 +9,9 @@
   }
 </style>
 
-<div style="overflow:hidden; margin-top:2.5rem; margin-bottom:3rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
+<div style="overflow:hidden; margin-top:2rem; margin-bottom:2.5rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
   <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
-    {{ $items := slice "animated-title" "particle-field" "spotlight" "glitch-text" "badge" "ticker" }}
+    {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" }}
     {{ range $items }}
     <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
       <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
@@ -35,16 +25,11 @@
   </div>
 </div>
 
-<!-- CTAs -->
-<div style="text-align:center; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; padding-bottom:4rem;">
-  <a href="/components/"
+<!-- CTA -->
+<div style="text-align:center; padding-bottom:4rem;">
+  <a href="/scenes/"
      style="display:inline-flex; align-items:center; gap:0.5rem; background:#6366f1; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
      onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
-    Browse all components →
-  </a>
-  <a href="/templates/"
-     style="display:inline-flex; align-items:center; gap:0.5rem; background:transparent; color:#e5e5e5; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; border:1px solid #3f3f46; transition:border-color 0.15s, color 0.15s;"
-     onmouseover="this.style.borderColor='#6366f1';this.style.color='#a5b4fc'" onmouseout="this.style.borderColor='#3f3f46';this.style.color='#e5e5e5'">
-    Ready to use templates →
+    Browse scenes →
   </a>
 </div>

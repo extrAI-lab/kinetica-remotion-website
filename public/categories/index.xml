@@ -7,37 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Remotion Components</copyright>
-    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Text</title>
-      <link>http://localhost:1313/categories/text/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/text/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Transitions</title>
-      <link>http://localhost:1313/categories/transitions/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/transitions/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Visual</title>
-      <link>http://localhost:1313/categories/visual/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/visual/</guid>
-      <description></description>
-      
-    </item>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
