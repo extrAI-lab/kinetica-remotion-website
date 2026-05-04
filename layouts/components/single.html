@@ -34,6 +34,8 @@
     white-space: nowrap;
   }
   #rt-snackbar.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .rt-action-link { transition: color 0.15s; }
+  .rt-action-link:hover { color: #a5b4fc !important; }
 </style>
 
 <article class="pb-16 pt-2">
@@ -103,13 +105,13 @@
       <!-- Actions -->
       {{ with .Params.github }}
       <div class="rounded-xl border border-neutral-700 p-4" style="background: #1e1e1e; display: flex; flex-direction: column; gap: 0.875rem;">
-        <a href="{{ . }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.75rem;color:#e5e5e5;text-decoration:none;">
+        <a href="{{ . }}" target="_blank" rel="noopener" class="rt-action-link" style="display:flex;align-items:center;gap:0.75rem;color:#e5e5e5;text-decoration:none;">
           <span style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             {{ partial "icon.html" "github" }}
           </span>
           <span class="text-sm font-medium">Fork component</span>
         </a>
-        <a href="{{ . }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.75rem;color:#e5e5e5;text-decoration:none;">
+        <a href="{{ . }}" target="_blank" rel="noopener" class="rt-action-link" style="display:flex;align-items:center;gap:0.75rem;color:#e5e5e5;text-decoration:none;">
           <span style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             {{ partial "icon.html" "github" }}
           </span>
@@ -118,17 +120,6 @@
       </div>
       {{ end }}
 
-      <!-- Uses chips -->
-      {{ with .Params.uses }}
-      <div class="rounded-xl border border-neutral-700 p-4" style="background: #1e1e1e;">
-        <p class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">Built with</p>
-        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-          {{ range . }}
-          <span class="rt-chip"><span class="rt-chip-dot"></span>{{ . }}</span>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
 
     </div>
   </div>
