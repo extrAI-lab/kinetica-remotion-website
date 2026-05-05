@@ -1,9 +1,9 @@
 <!-- Hero -->
 <div class="pb-10 text-center" style="padding-top:16px;">
-  <h1 class="font-extrabold tracking-tight text-neutral-100" style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; max-width:960px; margin:0 auto 1rem;">
+  <h1 class="font-extrabold tracking-tight text-neutral-900" style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; max-width:960px; margin:0 auto 1rem;">
     Self-contained Remotion components, ready to install and ship.
   </h1>
-  <p class="font-semibold text-neutral-400" style="font-size:clamp(1rem,2vw,1.4rem); max-width:780px; margin:0 auto; line-height:1.5;">
+  <p class="font-semibold text-neutral-600" style="font-size:clamp(1rem,2vw,1.4rem); max-width:780px; margin:0 auto; line-height:1.5;">
     Pick one or more components, run a single CLI command, get a ready-to-render Remotion project.
   </p>
 </div>
@@ -38,8 +38,8 @@
 <!-- CTA -->
 <div style="text-align:center; padding-bottom:5rem;">
   <a href="{{ "components/" | relURL }}"
-     style="display:inline-flex; align-items:center; gap:0.5rem; background:#6366f1; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
-     onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
+     style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
+     onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
     Browse components →
   </a>
 </div>
@@ -53,23 +53,23 @@
     margin-bottom: 5rem;
   }
   .rt-benefit-card {
-    background: #111113;
-    border: 1px solid #1f1f23;
+    background: #f8f8fc;
+    border: 1px solid #e4e4f0;
     border-radius: 14px;
     padding: 1.5rem;
     transition: border-color 0.2s;
   }
-  .rt-benefit-card:hover { border-color: #3f3f46; }
+  .rt-benefit-card:hover { border-color: #b8a8e8; }
   .rt-benefit-icon {
     width: 36px; height: 36px; border-radius: 10px;
-    background: #1a1a2e; display: flex; align-items: center; justify-content: center;
+    background: #eeebff; display: flex; align-items: center; justify-content: center;
     margin-bottom: 1rem; font-size: 1.1rem;
   }
   .rt-benefit-title {
-    font-size: 0.95rem; font-weight: 700; color: #f5f5f5; margin: 0 0 0.4rem;
+    font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin: 0 0 0.4rem;
   }
   .rt-benefit-body {
-    font-size: 0.83rem; color: #71717a; line-height: 1.6; margin: 0;
+    font-size: 0.83rem; color: #52526a; line-height: 1.6; margin: 0;
   }
 
   .rt-how-grid {
@@ -88,27 +88,27 @@
     content: '';
     position: absolute; left: 0; top: 22px;
     width: 1px; height: 24px;
-    background: linear-gradient(to bottom, #3f3f46, transparent);
+    background: linear-gradient(to bottom, #c0c0d8, transparent);
   }
   .rt-how-num {
     width: 44px; height: 44px; border-radius: 50%;
-    border: 1px solid #3f3f46; background: #18181b;
-    color: #6366f1; font-weight: 800; font-size: 1rem;
+    border: 1px solid #c0c0d8; background: #f0edff;
+    color: #6d41dc; font-weight: 800; font-size: 1rem;
     display: inline-flex; align-items: center; justify-content: center;
     margin-bottom: 0.85rem;
   }
-  .rt-how-title { font-size: 0.9rem; font-weight: 700; color: #e5e5e5; margin: 0 0 0.4rem; }
-  .rt-how-body  { font-size: 0.8rem; color: #71717a; line-height: 1.55; margin: 0; }
+  .rt-how-title { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; margin: 0 0 0.4rem; }
+  .rt-how-body  { font-size: 0.8rem; color: #52526a; line-height: 1.55; margin: 0; }
   .rt-section-label {
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #6366f1; margin-bottom: 0.75rem;
+    text-transform: uppercase; color: #6d41dc; margin-bottom: 0.75rem;
   }
   .rt-section-heading {
     font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800;
-    color: #f5f5f5; margin: 0 0 0.75rem; line-height: 1.2;
+    color: #1a1a2e; margin: 0 0 0.75rem; line-height: 1.2;
   }
   .rt-section-sub {
-    font-size: 0.9rem; color: #71717a; line-height: 1.6; margin: 0 0 2.5rem;
+    font-size: 0.9rem; color: #52526a; line-height: 1.6; margin: 0 0 2.5rem;
     max-width: 520px;
   }
 </style>
@@ -138,7 +138,7 @@
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🔁</div>
       <p class="rt-benefit-title">Composable by design</p>
-      <p class="rt-benefit-body">Components chain automatically via Remotion's <code style="font-size:0.78rem;background:#1f1f23;padding:1px 5px;border-radius:3px;">&lt;Series&gt;</code> — pick multiple and they become a single, sequenced video.</p>
+      <p class="rt-benefit-body">Components chain automatically via Remotion's <code style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">&lt;Series&gt;</code> — pick multiple and they become a single, sequenced video.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🏷</div>
@@ -168,7 +168,7 @@
     <div class="rt-how-step">
       <div class="rt-how-num">2</div>
       <p class="rt-how-title">Run the CLI</p>
-      <p class="rt-how-body">Copy the generated <code style="font-size:0.78rem;background:#1f1f23;padding:1px 5px;border-radius:3px;">npx create-kinetica install</code> command. It scaffolds a Remotion project with your components already sequenced.</p>
+      <p class="rt-how-body">Copy the generated <code style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">npx create-kinetica install</code> command. It scaffolds a Remotion project with your components already sequenced.</p>
     </div>
     <div class="rt-how-step">
       <div class="rt-how-num">3</div>

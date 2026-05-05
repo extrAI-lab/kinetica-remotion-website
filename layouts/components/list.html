@@ -4,24 +4,25 @@
   .rt-check {
     position: absolute; top: 10px; right: 10px; z-index: 20;
     width: 26px; height: 26px; border-radius: 50%;
-    background: rgba(9,9,11,0.85); border: 2px solid #52525b;
+    background: rgba(240,237,255,0.9); border: 2px solid #9090b8;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer; backdrop-filter: blur(4px);
     transition: background 0.15s, border-color 0.15s, transform 0.1s;
   }
-  .rt-check:hover { transform: scale(1.1); border-color: #6366f1; }
+  .rt-check:hover { transform: scale(1.1); border-color: #6d41dc; }
   .rt-check svg { opacity: 0; transition: opacity 0.15s; }
-  .rt-scene-wrap.sel .rt-check { background: #6366f1; border-color: #6366f1; }
+  .rt-scene-wrap.sel .rt-check { background: #6d41dc; border-color: #6d41dc; }
   .rt-scene-wrap.sel .rt-check svg { opacity: 1; }
-  .rt-scene-wrap.sel article { outline: 2px solid #6366f1; outline-offset: -1px; }
+  .rt-scene-wrap.sel article { outline: 2px solid #6d41dc; outline-offset: -1px; }
 
   #rt-bar {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
-    background: #18181b; border-top: 1px solid #3f3f46;
+    background: #fff; border-top: 1px solid #e4e4f0;
     padding: 0.875rem 2rem;
     display: flex; align-items: center; gap: 1rem;
     transform: translateY(100%);
     transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.06);
   }
   #rt-bar.show { transform: translateY(0); }
 
@@ -32,22 +33,23 @@
   }
   #rt-modal.show { display: flex; }
   .rt-modal-box {
-    background: #18181b; border: 1px solid #3f3f46;
+    background: #fff; border: 1px solid #e4e4f0;
     border-radius: 16px; padding: 1.75rem;
     width: 580px; max-width: 92vw;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
   }
   .rt-cmd-block {
-    background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 8px;
+    background: #f8f8fc; border: 1px solid #e4e4f0; border-radius: 8px;
     padding: 0.75rem 1rem;
     display: flex; align-items: center; gap: 0.75rem;
   }
   #rt-project-input {
-    background: #0f0f0f; border: 1px solid #3f3f46; border-radius: 8px;
-    color: #e5e5e5; font-size: 0.875rem; padding: 0.5rem 0.75rem;
+    background: #fff; border: 1px solid #d0d0e0; border-radius: 8px;
+    color: #1a1a2e; font-size: 0.875rem; padding: 0.5rem 0.75rem;
     outline: none; width: 100%; font-family: system-ui, sans-serif;
     transition: border-color 0.15s;
   }
-  #rt-project-input:focus { border-color: #6366f1; }
+  #rt-project-input:focus { border-color: #6d41dc; }
   .rt-bar-btn {
     font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1.25rem;
     border-radius: 999px; border: none; cursor: pointer;
@@ -57,7 +59,7 @@
 
 <div style="padding-top:1.5rem; padding-bottom:6rem;">
 
-  <p class="font-semibold text-neutral-400" style="font-size:1rem; margin-bottom:2rem; max-width:600px; line-height:1.5;">
+  <p class="font-semibold text-neutral-600" style="font-size:1rem; margin-bottom:2rem; max-width:600px; line-height:1.5;">
     Production-ready 3D compositions — select one or more components, then get the install command.
   </p>
 
@@ -78,12 +80,12 @@
 
 <!-- Export bar -->
 <div id="rt-bar">
-  <span id="rt-count" style="font-size:0.875rem; color:#a1a1aa;"></span>
+  <span id="rt-count" style="font-size:0.875rem; color:#52526a;"></span>
   <div style="flex:1;"></div>
-  <button class="rt-bar-btn" onclick="rtClear()" style="background:#27272a; color:#a1a1aa;">Clear</button>
+  <button class="rt-bar-btn" onclick="rtClear()" style="background:#f0f0f8; color:#52526a; border:1px solid #d0d0e0;">Clear</button>
   <button class="rt-bar-btn" onclick="rtShowModal()"
-    style="background:#6366f1; color:#fff;"
-    onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
+    style="background:#6d41dc; color:#fff;"
+    onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
     Export video →
   </button>
 </div>
@@ -93,25 +95,25 @@
   <div class="rt-modal-box">
 
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
-      <h2 style="font-size:1.1rem; font-weight:700; color:#f5f5f5; margin:0;">Export video</h2>
-      <button onclick="rtCloseModal()" style="background:none; border:none; color:#71717a; font-size:1.25rem; cursor:pointer; line-height:1; padding:0;">✕</button>
+      <h2 style="font-size:1.1rem; font-weight:700; color:#1a1a2e; margin:0;">Export video</h2>
+      <button onclick="rtCloseModal()" style="background:none; border:none; color:#9090b8; font-size:1.25rem; cursor:pointer; line-height:1; padding:0;">✕</button>
     </div>
 
     <!-- Project name -->
     <div style="margin-bottom:1.25rem;">
-      <label style="display:block; font-size:0.75rem; font-weight:600; color:#71717a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Project name</label>
+      <label style="display:block; font-size:0.75rem; font-weight:600; color:#52526a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Project name</label>
       <input id="rt-project-input" type="text" value="my-video" placeholder="my-video" oninput="rtUpdateCmd()">
     </div>
 
     <!-- Command -->
     <div style="margin-bottom:1.5rem;">
-      <label style="display:block; font-size:0.75rem; font-weight:600; color:#71717a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">CLI command</label>
+      <label style="display:block; font-size:0.75rem; font-weight:600; color:#52526a; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">CLI command</label>
 
       <div class="rt-cmd-block">
-        <code id="rt-cmd-text" style="font-size:0.82rem; color:#e5e5e5; font-family:monospace; flex:1; word-break:break-all; white-space:pre-wrap;"></code>
+        <code id="rt-cmd-text" style="font-size:0.82rem; color:#1a1a2e; font-family:monospace; flex:1; word-break:break-all; white-space:pre-wrap;"></code>
         <button id="rt-copy-btn" onclick="rtCopy()"
-          style="background:#27272a; border:none; color:#a1a1aa; font-size:0.75rem; padding:4px 12px; border-radius:6px; cursor:pointer; flex-shrink:0; font-family:system-ui,sans-serif; transition:color 0.15s;"
-          onmouseover="this.style.color='#e5e5e5'" onmouseout="this.style.color='#a1a1aa'">
+          style="background:#eeebff; border:none; color:#6d41dc; font-size:0.75rem; padding:4px 12px; border-radius:6px; cursor:pointer; flex-shrink:0; font-family:system-ui,sans-serif; transition:color 0.15s;"
+          onmouseover="this.style.color='#5b3ae8'" onmouseout="this.style.color='#6d41dc'">
           Copy
         </button>
       </div>
@@ -162,8 +164,8 @@
     list.innerHTML = '';
     document.querySelectorAll('.rt-scene-wrap.sel').forEach(wrap => {
       const chip = document.createElement('span');
-      chip.style.cssText = 'display:inline-flex;align-items:center;gap:5px;background:#27272a;border:1px solid #3f3f46;border-radius:6px;padding:3px 10px;font-size:0.78rem;color:#a1a1aa;font-family:system-ui,sans-serif;';
-      chip.innerHTML = `<span style="width:5px;height:5px;border-radius:50%;background:#6366f1;flex-shrink:0;"></span>${wrap.dataset.title}`;
+      chip.style.cssText = 'display:inline-flex;align-items:center;gap:5px;background:#f0edff;border:1px solid #c8c0e8;border-radius:6px;padding:3px 10px;font-size:0.78rem;color:#52526a;font-family:system-ui,sans-serif;';
+      chip.innerHTML = `<span style="width:5px;height:5px;border-radius:50%;background:#6d41dc;flex-shrink:0;"></span>${wrap.dataset.title}`;
       list.appendChild(chip);
     });
     rtUpdateCmd();

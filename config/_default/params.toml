@@ -1,8 +1,8 @@
 logo = "img/logo.png"
 
-colorScheme = "slate"
-defaultAppearance = "dark"
-autoSwitchAppearance = true
+colorScheme = "kinetica"
+defaultAppearance = "light"
+autoSwitchAppearance = false
 
 enableSearch = true
 enableCodeCopy = false
