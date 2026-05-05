@@ -23,3 +23,4 @@ Thumbs.db
 
 # Components
 components/node_modules/*
+.tokensave
