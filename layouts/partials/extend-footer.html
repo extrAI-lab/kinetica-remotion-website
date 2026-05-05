@@ -1,8 +1,11 @@
 <script src="{{ "js/remotion-components.js" | relURL }}"></script>
 <script>
 (function () {
+  var base = {{ "" | relURL | jsonify | safeJS }}.replace(/\/$/, '');
   var path = window.location.pathname;
-  var map = { '/components': '/components/', '/contribute': '/contribute/' };
+  var map = {};
+  map[base + '/components'] = base + '/components/';
+  map[base + '/contribute'] = base + '/contribute/';
   Object.keys(map).forEach(function (prefix) {
     if (path.startsWith(prefix)) {
       document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {
