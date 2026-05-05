@@ -20,6 +20,5 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# scenes/list.html resolves an absolute path via getenv("PWD") / REMOTION_COMPONENTS_ROOT
 [security.funcs]
-  getenv = ['^HUGO_', '^CI$', '^PWD$', '^REMOTION_COMPONENTS_ROOT$']
+  getenv = ['^HUGO_', '^CI$']

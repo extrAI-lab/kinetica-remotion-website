@@ -1,7 +1,3 @@
-# remotion-components root when running `hugo server` only (scenes list export + scene detail “Install” box).
-# Resolved to an absolute path: param > REMOTION_COMPONENTS_ROOT > PWD/../remotion-components
-# createKineticaLocalRoot = "relative/or/absolute/path"
-
 colorScheme = "slate"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
