@@ -1,0 +1,10 @@
+body {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.thumbnail_card {
+  min-width: 0 !important;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}

@@ -1,0 +1,16 @@
+locale = "en"
+label = "English"
+weight = 1
+title = "Remotion Components"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Beautiful, ready-to-use Remotion video components for your next project."
+
+[params.author]
+  name = "Remotion Components"
+  headline = "Beautiful video components built with Remotion"
+  bio = "Discover and download professional Remotion components for your next video project."

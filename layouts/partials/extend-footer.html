@@ -1,0 +1,15 @@
+<script src="/js/remotion-components.js"></script>
+<script>
+(function () {
+  var path = window.location.pathname;
+  var map = { '/components': '/components/', '/contribute': '/contribute/' };
+  Object.keys(map).forEach(function (prefix) {
+    if (path.startsWith(prefix)) {
+      document.querySelectorAll('a[href="' + map[prefix] + '"]').forEach(function (a) {
+        a.style.color = '#6366f1';
+        a.style.fontWeight = '700';
+      });
+    }
+  });
+})();
+</script>

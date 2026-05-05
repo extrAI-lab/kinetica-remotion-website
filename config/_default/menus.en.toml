@@ -1,0 +1,15 @@
+[[main]]
+  name = "Components"
+  pageRef = "components"
+  weight = 10
+
+[[main]]
+  name = "Contribute"
+  url = "/contribute/"
+  weight = 15
+
+[[main]]
+  name = ""
+  pre = "github"
+  url = "https://github.com/extrAI-lab/remotion-components"
+  weight = 20
