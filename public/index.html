@@ -576,12 +576,146 @@
 </div>
 
 
-<div style="text-align:center; padding-bottom:4rem;">
+<div style="text-align:center; padding-bottom:5rem;">
   <a href="/components/"
      style="display:inline-flex; align-items:center; gap:0.5rem; background:#6366f1; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
      onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
     Browse components →
   </a>
+</div>
+
+
+<style>
+  .rt-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 5rem;
+  }
+  .rt-benefit-card {
+    background: #111113;
+    border: 1px solid #1f1f23;
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .rt-benefit-card:hover { border-color: #3f3f46; }
+  .rt-benefit-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: #1a1a2e; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem; font-size: 1.1rem;
+  }
+  .rt-benefit-title {
+    font-size: 0.95rem; font-weight: 700; color: #f5f5f5; margin: 0 0 0.4rem;
+  }
+  .rt-benefit-body {
+    font-size: 0.83rem; color: #71717a; line-height: 1.6; margin: 0;
+  }
+
+  .rt-how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-bottom: 6rem;
+    position: relative;
+  }
+  @media (max-width: 640px) {
+    .rt-how-grid { grid-template-columns: 1fr; }
+    .rt-how-connector { display: none; }
+  }
+  .rt-how-step { text-align: center; padding: 0 1.5rem; position: relative; }
+  .rt-how-step + .rt-how-step::before {
+    content: '';
+    position: absolute; left: 0; top: 22px;
+    width: 1px; height: 24px;
+    background: linear-gradient(to bottom, #3f3f46, transparent);
+  }
+  .rt-how-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 1px solid #3f3f46; background: #18181b;
+    color: #6366f1; font-weight: 800; font-size: 1rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 0.85rem;
+  }
+  .rt-how-title { font-size: 0.9rem; font-weight: 700; color: #e5e5e5; margin: 0 0 0.4rem; }
+  .rt-how-body  { font-size: 0.8rem; color: #71717a; line-height: 1.55; margin: 0; }
+  .rt-section-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #6366f1; margin-bottom: 0.75rem;
+  }
+  .rt-section-heading {
+    font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800;
+    color: #f5f5f5; margin: 0 0 0.75rem; line-height: 1.2;
+  }
+  .rt-section-sub {
+    font-size: 0.9rem; color: #71717a; line-height: 1.6; margin: 0 0 2.5rem;
+    max-width: 520px;
+  }
+</style>
+
+
+<div style="margin-bottom: 5rem;">
+  <p class="rt-section-label">Why kinetica</p>
+  <h2 class="rt-section-heading">Stop building animations from scratch.</h2>
+  <p class="rt-section-sub">Every component is production-ready: typed props, sensible defaults, and a single CLI command to drop it into any Remotion project.</p>
+
+  <div class="rt-benefit-grid">
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">⚡</div>
+      <p class="rt-benefit-title">Ship in minutes</p>
+      <p class="rt-benefit-body">One command scaffolds a full Remotion project with your chosen components already wired up, ready to render.</p>
+    </div>
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">🎛</div>
+      <p class="rt-benefit-title">Fully customizable</p>
+      <p class="rt-benefit-body">Every visual property — colors, text, timing, sizes — is exposed as a typed Zod prop. Tweak in Remotion Studio or pass data programmatically.</p>
+    </div>
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">📦</div>
+      <p class="rt-benefit-title">Self-contained</p>
+      <p class="rt-benefit-body">Each component has zero cross-dependencies. Copy one or ten — they never interfere with each other or your existing codebase.</p>
+    </div>
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">🔁</div>
+      <p class="rt-benefit-title">Composable by design</p>
+      <p class="rt-benefit-body">Components chain automatically via Remotion's <code style="font-size:0.78rem;background:#1f1f23;padding:1px 5px;border-radius:3px;">&lt;Series&gt;</code> — pick multiple and they become a single, sequenced video.</p>
+    </div>
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">🏷</div>
+      <p class="rt-benefit-title">Typed end-to-end</p>
+      <p class="rt-benefit-body">Full TypeScript and Zod schemas mean your editor catches mistakes before Remotion ever renders a frame.</p>
+    </div>
+    <div class="rt-benefit-card">
+      <div class="rt-benefit-icon">🌱</div>
+      <p class="rt-benefit-title">Open & growing</p>
+      <p class="rt-benefit-body">The library is open-source and accepting contributions. New components ship as standalone packages — no breaking changes.</p>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom: 6rem;">
+  <p class="rt-section-label">How it works</p>
+  <h2 class="rt-section-heading">From zero to rendered video in three steps.</h2>
+  <p class="rt-section-sub">No boilerplate, no manual wiring. The CLI handles project setup so you can focus on customizing.</p>
+
+  <div class="rt-how-grid">
+    <div class="rt-how-step">
+      <div class="rt-how-num">1</div>
+      <p class="rt-how-title">Pick your components</p>
+      <p class="rt-how-body">Browse the library and select one or more components. Each card shows a live preview so you know exactly what you're getting.</p>
+    </div>
+    <div class="rt-how-step">
+      <div class="rt-how-num">2</div>
+      <p class="rt-how-title">Run the CLI</p>
+      <p class="rt-how-body">Copy the generated <code style="font-size:0.78rem;background:#1f1f23;padding:1px 5px;border-radius:3px;">npx create-kinetica install</code> command. It scaffolds a Remotion project with your components already sequenced.</p>
+    </div>
+    <div class="rt-how-step">
+      <div class="rt-how-num">3</div>
+      <p class="rt-how-title">Customize &amp; render</p>
+      <p class="rt-how-body">Open Remotion Studio, edit props visually, then render to MP4. Every prop is live-editable — no code changes required for simple tweaks.</p>
+    </div>
+  </div>
 </div>
 
   
