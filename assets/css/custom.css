@@ -1,6 +1,14 @@
 body {
   margin-left: auto !important;
   margin-right: auto !important;
+  max-width: 1440px !important;
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
 }
 
 .logo {

@@ -1,9 +1,10 @@
 <!-- Hero -->
 <div class="pb-10 text-center" style="padding-top:16px;">
-  <h1 class="font-extrabold tracking-tight text-neutral-900" style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; max-width:960px; margin:0 auto 1rem;">
-    Self-contained Remotion components, ready to install and ship.
+  <h1 class="font-extrabold tracking-tight text-neutral-900"
+    style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; margin:0 auto 1rem;">
+    Self-contained Remotion components,<br>ready to install and ship.
   </h1>
-  <p class="font-semibold text-neutral-600" style="font-size:clamp(1rem,2vw,1.4rem); max-width:780px; margin:0 auto; line-height:1.5;">
+  <p class="font-semibold text-neutral-600" style="font-size:clamp(1rem,2vw,1.4rem); margin:0 auto; line-height:1.5;">
     Pick one or more components, run a single CLI command, get a ready-to-render Remotion project.
   </p>
 </div>
@@ -11,25 +12,37 @@
 <!-- Carousel -->
 <style>
   @keyframes rt-marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
+
   #rt-carousel-track {
     animation: rt-marquee 40s linear infinite;
   }
 </style>
 
-<div style="overflow:hidden; margin-top:2rem; margin-bottom:2.5rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
+<div
+  style="overflow:hidden; margin-top:2rem; margin-bottom:2.5rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
   <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
-    {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" }}
+    {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d"
+    "transform3d-showcase" }}
     {{ range $items }}
-    <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
-      <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+    <div
+      style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+      <div class="rt-carousel-item" data-component="{{ . }}"
+        style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
     </div>
     {{ end }}
     {{ range $items }}
-    <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
-      <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+    <div
+      style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+      <div class="rt-carousel-item" data-component="{{ . }}"
+        style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
     </div>
     {{ end }}
   </div>
@@ -37,9 +50,9 @@
 
 <!-- CTA -->
 <div style="text-align:center; padding-bottom:5rem;">
-  <a href="{{ "components/" | relURL }}"
-     style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
-     onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
+  <a href="{{ " components/" | relURL }}"
+    style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
+    onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
     Browse components →
   </a>
 </div>
@@ -52,6 +65,7 @@
     gap: 1.25rem;
     margin-bottom: 5rem;
   }
+
   .rt-benefit-card {
     background: #f8f8fc;
     border: 1px solid #e4e4f0;
@@ -59,17 +73,35 @@
     padding: 1.5rem;
     transition: border-color 0.2s;
   }
-  .rt-benefit-card:hover { border-color: #b8a8e8; }
+
+  .rt-benefit-card:hover {
+    border-color: #b8a8e8;
+  }
+
   .rt-benefit-icon {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: #eeebff; display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1rem; font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #eeebff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
   }
+
   .rt-benefit-title {
-    font-size: 0.95rem; font-weight: 700; color: #1a1a2e; margin: 0 0 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.4rem;
   }
+
   .rt-benefit-body {
-    font-size: 0.83rem; color: #52526a; line-height: 1.6; margin: 0;
+    font-size: 0.83rem;
+    color: #52526a;
+    line-height: 1.6;
+    margin: 0;
   }
 
   .rt-how-grid {
@@ -79,37 +111,84 @@
     margin-bottom: 6rem;
     position: relative;
   }
+
   @media (max-width: 640px) {
-    .rt-how-grid { grid-template-columns: 1fr; }
-    .rt-how-connector { display: none; }
+    .rt-how-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rt-how-connector {
+      display: none;
+    }
   }
-  .rt-how-step { text-align: center; padding: 0 1.5rem; position: relative; }
-  .rt-how-step + .rt-how-step::before {
+
+  .rt-how-step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+
+  .rt-how-step+.rt-how-step::before {
     content: '';
-    position: absolute; left: 0; top: 22px;
-    width: 1px; height: 24px;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 1px;
+    height: 24px;
     background: linear-gradient(to bottom, #c0c0d8, transparent);
   }
+
   .rt-how-num {
-    width: 44px; height: 44px; border-radius: 50%;
-    border: 1px solid #c0c0d8; background: #f0edff;
-    color: #6d41dc; font-weight: 800; font-size: 1rem;
-    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #c0c0d8;
+    background: #f0edff;
+    color: #6d41dc;
+    font-weight: 800;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 0.85rem;
   }
-  .rt-how-title { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; margin: 0 0 0.4rem; }
-  .rt-how-body  { font-size: 0.8rem; color: #52526a; line-height: 1.55; margin: 0; }
+
+  .rt-how-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.4rem;
+  }
+
+  .rt-how-body {
+    font-size: 0.8rem;
+    color: #52526a;
+    line-height: 1.55;
+    margin: 0;
+  }
+
   .rt-section-label {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #6d41dc; margin-bottom: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6d41dc;
+    margin-bottom: 0.75rem;
   }
+
   .rt-section-heading {
-    font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800;
-    color: #1a1a2e; margin: 0 0 0.75rem; line-height: 1.2;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
   }
+
   .rt-section-sub {
-    font-size: 0.9rem; color: #52526a; line-height: 1.6; margin: 0 0 2.5rem;
-    max-width: 520px;
+    font-size: 0.9rem;
+    color: #52526a;
+    line-height: 1.6;
+    margin: 0 0 2.5rem;
   }
 </style>
 
@@ -117,38 +196,46 @@
 <div style="margin-bottom: 5rem;">
   <p class="rt-section-label">Why kinetica</p>
   <h2 class="rt-section-heading">Stop building animations from scratch.</h2>
-  <p class="rt-section-sub">Every component is production-ready: typed props, sensible defaults, and a single CLI command to drop it into any Remotion project.</p>
+  <p class="rt-section-sub">Every component is production-ready: typed props, sensible defaults, and a single CLI
+    command to drop it into any Remotion project.</p>
 
   <div class="rt-benefit-grid">
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">⚡</div>
       <p class="rt-benefit-title">Ship in minutes</p>
-      <p class="rt-benefit-body">One command scaffolds a full Remotion project with your chosen components already wired up, ready to render.</p>
+      <p class="rt-benefit-body">One command scaffolds a full Remotion project with your chosen components already wired
+        up, ready to render.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🎛</div>
       <p class="rt-benefit-title">Fully customizable</p>
-      <p class="rt-benefit-body">Every visual property — colors, text, timing, sizes — is exposed as a typed Zod prop. Tweak in Remotion Studio or pass data programmatically.</p>
+      <p class="rt-benefit-body">Every visual property is exposed as a typed Zod prop. Tweak in Remotion Studio or pass
+        data programmatically.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">📦</div>
       <p class="rt-benefit-title">Self-contained</p>
-      <p class="rt-benefit-body">Each component has zero cross-dependencies. Copy one or ten — they never interfere with each other or your existing codebase.</p>
+      <p class="rt-benefit-body">Each component has zero cross-dependencies. Copy one or ten, they never interfere with
+        each other or your existing codebase.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🔁</div>
       <p class="rt-benefit-title">Composable by design</p>
-      <p class="rt-benefit-body">Components chain automatically via Remotion's <code style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">&lt;Series&gt;</code> — pick multiple and they become a single, sequenced video.</p>
+      <p class="rt-benefit-body">Components chain automatically via Remotion's <code
+          style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">&lt;Series&gt;</code>
+        , pick multiple and they become a single, sequenced video.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🏷</div>
       <p class="rt-benefit-title">Typed end-to-end</p>
-      <p class="rt-benefit-body">Full TypeScript and Zod schemas mean your editor catches mistakes before Remotion ever renders a frame.</p>
+      <p class="rt-benefit-body">Full TypeScript and Zod schemas mean your editor catches mistakes before Remotion ever
+        renders a frame.</p>
     </div>
     <div class="rt-benefit-card">
       <div class="rt-benefit-icon">🌱</div>
       <p class="rt-benefit-title">Open & growing</p>
-      <p class="rt-benefit-body">The library is open-source and accepting contributions. New components ship as standalone packages — no breaking changes.</p>
+      <p class="rt-benefit-body">The library is open-source and accepting contributions. New components ship as
+        standalone packages. No breaking changes.</p>
     </div>
   </div>
 </div>
@@ -157,23 +244,28 @@
 <div style="margin-bottom: 6rem;">
   <p class="rt-section-label">How it works</p>
   <h2 class="rt-section-heading">From zero to rendered video in three steps.</h2>
-  <p class="rt-section-sub">No boilerplate, no manual wiring. The CLI handles project setup so you can focus on customizing.</p>
+  <p class="rt-section-sub">No boilerplate, no manual wiring. The CLI handles project setup so you can focus on
+    customizing.</p>
 
   <div class="rt-how-grid">
     <div class="rt-how-step">
       <div class="rt-how-num">1</div>
       <p class="rt-how-title">Pick your components</p>
-      <p class="rt-how-body">Browse the library and select one or more components. Each card shows a live preview so you know exactly what you're getting.</p>
+      <p class="rt-how-body">Browse the library and select one or more components. Each card shows a live preview so you
+        know exactly what you're getting.</p>
     </div>
     <div class="rt-how-step">
       <div class="rt-how-num">2</div>
       <p class="rt-how-title">Run the CLI</p>
-      <p class="rt-how-body">Copy the generated <code style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">npx create-kinetica install</code> command. It scaffolds a Remotion project with your components already sequenced.</p>
+      <p class="rt-how-body">Copy the generated <code
+          style="font-size:0.78rem;background:#ebe8f8;color:#5b3ae8;padding:1px 5px;border-radius:3px;">npx create-kinetica install</code>
+        command. It scaffolds a Remotion project with your components already sequenced.</p>
     </div>
     <div class="rt-how-step">
       <div class="rt-how-num">3</div>
       <p class="rt-how-title">Customize &amp; render</p>
-      <p class="rt-how-body">Open Remotion Studio, edit props visually, then render to MP4. Every prop is live-editable — no code changes required for simple tweaks.</p>
+      <p class="rt-how-body">Open Remotion Studio, edit props visually, then render to MP4. Every prop is live-editable,
+        no code changes required for simple tweaks.</p>
     </div>
   </div>
 </div>
