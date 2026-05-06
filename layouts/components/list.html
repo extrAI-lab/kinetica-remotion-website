@@ -151,6 +151,45 @@
     color: #1a1a2e;
     background: #e8e4f8;
   }
+
+  /* Category sidebar */
+  .rt-cat-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.4rem 0.75rem;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #52526a;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .rt-cat-btn:hover {
+    background: #f0edff;
+    color: #6d41dc;
+  }
+
+  .rt-cat-btn.active {
+    background: #eeebff;
+    color: #6d41dc;
+    font-weight: 700;
+  }
+
+  .rt-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 640px) {
+    .rt-layout { grid-template-columns: 1fr; }
+    .rt-sidebar { display: none; }
+  }
 </style>
 
 <div style="padding-top:1.5rem; padding-bottom:6rem;">
@@ -162,19 +201,35 @@
     Select one or more components, then get the install command.
   </p>
 
-  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
-    {{ range .Pages }}
-    <div class="rt-scene-wrap" data-scene="{{ .Params.component }}" data-title="{{ .Title }}">
-      <div class="rt-check">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      {{ partial "article-link/card.html" . }}
-    </div>
-    {{ end }}
-  </div>
+  <div class="rt-layout">
 
+    <!-- Category sidebar -->
+    <div class="rt-sidebar" style="position:sticky; top:5rem; max-height:calc(100vh - 6rem); overflow-y:auto;">
+      <p style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#9090b8; margin:0 0 0.5rem 0.75rem;">Category</p>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:2px;">
+        <li><button class="rt-cat-btn active" data-cat="all">All</button></li>
+        {{- $cats := slice "3D" "Code" "Text" "Data" "Transition" "Lower Third" -}}
+        {{- range $cats }}
+        <li><button class="rt-cat-btn" data-cat="{{ . }}">{{ . }}</button></li>
+        {{- end }}
+      </ul>
+    </div>
+
+    <!-- Component grid -->
+    <div id="rt-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+      {{ range .Pages }}
+      <div class="rt-scene-wrap" data-scene="{{ .Params.component }}" data-title="{{ .Title }}" data-cat="{{ .Params.category }}">
+        <div class="rt-check">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        {{ partial "article-link/card.html" . }}
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
 </div>
 
 <!-- Inline command bar -->
@@ -202,6 +257,19 @@
         if (selected.has(id)) { selected.delete(id); wrap.classList.remove('sel'); }
         else { selected.add(id); wrap.classList.add('sel'); }
         updateBar();
+      });
+    });
+
+    // Category filter
+    document.querySelectorAll('.rt-cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.rt-cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        document.querySelectorAll('.rt-scene-wrap').forEach(wrap => {
+          const match = cat === 'all' || wrap.dataset.cat === cat;
+          wrap.style.display = match ? '' : 'none';
+        });
       });
     });
 

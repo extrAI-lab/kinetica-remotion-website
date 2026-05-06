@@ -3,6 +3,7 @@ title: "Transform 3D Showcase"
 description: "Chainable matrix-based 3D transforms with quaternion SLERP interpolation — a full API demonstration component."
 summary: "A showcase of the Transform3D API with orbiting elements, SLERP interpolation, and composable matrix transforms."
 tags: ["3d", "transform", "api", "showcase"]
+category: "3D"
 component: "transform3d-showcase"
 durationInFrames: 600
 uses: ["Transform3D", "Element3D", "StaggeredMotion"]
