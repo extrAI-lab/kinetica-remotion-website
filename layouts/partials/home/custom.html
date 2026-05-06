@@ -1,60 +1,83 @@
-<!-- Hero -->
-<div class="pb-10 text-center" style="padding-top:16px;">
-  <h1 class="font-extrabold tracking-tight text-neutral-900"
-    style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; margin:0 auto 1rem;">
-    Self-contained Remotion components,<br>ready to install and ship.
-  </h1>
-  <p class="font-semibold text-neutral-600" style="font-size:clamp(1rem,2vw,1.4rem); margin:0 auto; line-height:1.5;">
-    Pick one or more components, run a single CLI command, get a ready-to-render Remotion project.
-  </p>
-</div>
-
-<!-- Carousel -->
+<!-- Hero + Carousel + CTA wrapper -->
 <style>
+  @keyframes kt-flow-a { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2.118; } }
+  @keyframes kt-flow-b { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2.118; } }
+  @keyframes kt-flow-c { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2.118; } }
+  @keyframes kt-flow-d { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -2.118; } }
+  .kt-line {
+    fill: none; stroke-linecap: round; stroke-width: 0.009;
+    stroke-dasharray: 0.55 1.568;
+    transform-box: fill-box; transform-origin: center;
+  }
   @keyframes rt-marquee {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
-
-  #rt-carousel-track {
-    animation: rt-marquee 40s linear infinite;
-  }
+  #rt-carousel-track { animation: rt-marquee 40s linear infinite; }
 </style>
 
-<div
-  style="overflow:hidden; margin-top:2rem; margin-bottom:2.5rem; -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
-  <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
-    {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d"
-    "transform3d-showcase" }}
-    {{ range $items }}
-    <div
-      style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
-      <div class="rt-carousel-item" data-component="{{ . }}"
-        style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
-    </div>
-    {{ end }}
-    {{ range $items }}
-    <div
-      style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
-      <div class="rt-carousel-item" data-component="{{ . }}"
-        style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
-    </div>
-    {{ end }}
-  </div>
-</div>
+<div style="position:relative; overflow:hidden; padding-bottom:5rem;">
+  <!-- SVG background lines -->
+  <svg style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"
+       viewBox="0 0 1 1" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="kt-glow" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="0.01" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+    <path class="kt-line" d="M0.3,0.5a0.2,0.45 0 1,0 0.4,0a0.2,0.45 0 1,0 -0.4,0"
+          stroke="#00c8ee" stroke-opacity="0.6" filter="url(#kt-glow)"
+          style="transform:rotate(0deg); animation:kt-flow-a 20s linear infinite;"/>
+    <path class="kt-line" d="M0.3,0.5a0.2,0.45 0 1,0 0.4,0a0.2,0.45 0 1,0 -0.4,0"
+          stroke="#6d41dc" stroke-opacity="0.55" filter="url(#kt-glow)"
+          style="transform:rotate(90deg); animation:kt-flow-b 27s linear infinite;"/>
+    <path class="kt-line" d="M0.3,0.5a0.2,0.45 0 1,0 0.4,0a0.2,0.45 0 1,0 -0.4,0"
+          stroke="#f97316" stroke-opacity="0.5" filter="url(#kt-glow)"
+          style="transform:rotate(180deg); animation:kt-flow-c 17s linear infinite;"/>
+    <path class="kt-line" d="M0.3,0.5a0.2,0.45 0 1,0 0.4,0a0.2,0.45 0 1,0 -0.4,0"
+          stroke="#a855f7" stroke-opacity="0.45" filter="url(#kt-glow)"
+          style="transform:rotate(270deg); animation:kt-flow-d 23s linear infinite;"/>
+  </svg>
 
-<!-- CTA -->
-<div style="text-align:center; padding-bottom:5rem;">
-  <a href="{{ " components/" | relURL }}"
-    style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
-    onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
-    Browse components →
-  </a>
+  <!-- Hero text -->
+  <div class="pb-10 text-center" style="padding-top:16px; position:relative; z-index:1;">
+    <h1 class="font-extrabold tracking-tight text-neutral-900"
+      style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; margin:0 auto 1rem;">
+      Self-contained Remotion components,<br>ready to install and ship.
+    </h1>
+    <p class="font-semibold text-neutral-600" style="font-size:clamp(1rem,2vw,1.4rem); margin:0 auto; line-height:1.5;">
+      Pick one or more components, run a single CLI command, get a ready-to-render Remotion project.
+    </p>
+  </div>
+
+  <!-- Carousel -->
+  <div style="overflow:hidden; margin-top:2rem; margin-bottom:2.5rem; position:relative; z-index:1;
+              -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);
+              mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
+    <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
+      {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" }}
+      {{ range $items }}
+      <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+        <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+      </div>
+      {{ end }}
+      {{ range $items }}
+      <div style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
+        <div class="rt-carousel-item" data-component="{{ . }}" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="text-align:center; position:relative; z-index:1;">
+    <a href="{{ "components/" | relURL }}"
+      style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
+      onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
+      Browse components →
+    </a>
+  </div>
 </div>
 
 <!-- Benefits -->
