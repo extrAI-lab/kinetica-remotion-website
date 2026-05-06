@@ -7,7 +7,7 @@ category: "Code"
 component: "terminal-3d"
 durationInFrames: 300
 uses: ["Scene3D", "StaggeredMotion", "Terminal3D"]
-github: "https://github.com/extrAI-lab/remotion-components/tree/feat/init/src/scenes/terminal-3d"
+github: "https://github.com/extrAI-lab/remotion-components/tree/main/src/components/terminal-3d"
 ---
 
 Three macOS-style terminal windows positioned in 3D space. Each panel typewriters its output in sequence while the camera drifts through — ideal for developer content, code walkthroughs, or technical product demos.

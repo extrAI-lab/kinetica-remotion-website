@@ -208,7 +208,7 @@
       <p style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#9090b8; margin:0 0 0.5rem 0.75rem;">Category</p>
       <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:2px;">
         <li><button class="rt-cat-btn active" data-cat="all">All</button></li>
-        {{- $cats := slice "3D" "Code" "Text" "Data" "Transition" "Lower Third" -}}
+        {{- $cats := slice "3D" "Code" "Data" -}}
         {{- range $cats }}
         <li><button class="rt-cat-btn" data-cat="{{ . }}">{{ . }}</button></li>
         {{- end }}
@@ -275,7 +275,7 @@
 
     function buildCmd() {
       const ids = Array.from(selected).join(' ');
-      return `npx create-kinetica install ${ids}`;
+      return `npx kinetica-remotion-cli init ${ids}`;
     }
 
     function updateBar() {
