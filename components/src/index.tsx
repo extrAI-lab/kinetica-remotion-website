@@ -2,15 +2,24 @@ import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { Player, PlayerRef } from "@remotion/player";
 import {
-  Terminal3DScene,
-  terminal3DSceneDefaults,
-  Transform3DShowcaseScene,
-  transform3DShowcaseSceneDefaults,
+  CodeWalkthroughScene,
+  codeWalkthroughSceneDefaults,
+  WorldMapScene,
+  worldMapSceneDefaults,
+  TimelineJourneyScene,
+  timelineJourneySceneDefaults,
+  BarChartRaceScene,
+  barChartRaceSceneDefaults,
+  StatisticEmphasisScene,
+  statisticEmphasisSceneDefaults,
+  NetworkGraphScene,
+  networkGraphSceneDefaults,
+  ProductShowcaseScene,
+  productShowcaseSceneDefaults,
+  PhysicsInteractionScene,
+  physicsInteractionSceneDefaults,
 } from "@extrai-lab/kinetica-remotion";
 
-// The remotion-components package is built against React 19 types which include
-// Promise<ReactNode>. The Vite project uses React 18, so we cast to avoid
-// spurious type errors while keeping full runtime compatibility.
 type AnyComponent = React.FC<Record<string, unknown>>;
 
 type ComponentConfig = {
@@ -24,23 +33,77 @@ type ComponentConfig = {
 };
 
 const registry: Record<string, ComponentConfig> = {
-  "terminal-3d": {
-    component: Terminal3DScene as AnyComponent,
+  "code-walkthrough": {
+    component: CodeWalkthroughScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 360,
+    posterFrame: 60,
+    defaultProps: codeWalkthroughSceneDefaults as Record<string, unknown>,
+  },
+  "world-map": {
+    component: WorldMapScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 240,
+    posterFrame: 60,
+    defaultProps: worldMapSceneDefaults as Record<string, unknown>,
+  },
+  "timeline-journey": {
+    component: TimelineJourneyScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 400,
+    posterFrame: 80,
+    defaultProps: timelineJourneySceneDefaults as Record<string, unknown>,
+  },
+  "bar-chart-race": {
+    component: BarChartRaceScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 360,
+    posterFrame: 60,
+    defaultProps: barChartRaceSceneDefaults as Record<string, unknown>,
+  },
+  "statistic-emphasis": {
+    component: StatisticEmphasisScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 360,
+    posterFrame: 60,
+    defaultProps: statisticEmphasisSceneDefaults as Record<string, unknown>,
+  },
+  "network-graph": {
+    component: NetworkGraphScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 360,
+    posterFrame: 60,
+    defaultProps: networkGraphSceneDefaults as Record<string, unknown>,
+  },
+  "product-showcase-mobile": {
+    component: ProductShowcaseScene as AnyComponent,
     width: 1920,
     height: 1080,
     fps: 30,
     durationInFrames: 300,
-    posterFrame: 80,
-    defaultProps: terminal3DSceneDefaults as Record<string, unknown>,
+    posterFrame: 60,
+    defaultProps: productShowcaseSceneDefaults as Record<string, unknown>,
   },
-  "transform3d-showcase": {
-    component: Transform3DShowcaseScene as AnyComponent,
+  "physics-interaction": {
+    component: PhysicsInteractionScene as AnyComponent,
     width: 1920,
     height: 1080,
     fps: 30,
-    durationInFrames: 600,
-    posterFrame: 150,
-    defaultProps: transform3DShowcaseSceneDefaults as Record<string, unknown>,
+    durationInFrames: 360,
+    posterFrame: 60,
+    defaultProps: physicsInteractionSceneDefaults as Record<string, unknown>,
   },
 };
 
@@ -101,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll<HTMLElement>(".rt-carousel-item")
     .forEach((container) => {
-      const componentName = container.dataset.component ?? "terminal-3d";
+      const componentName = container.dataset.component ?? "code-walkthrough";
       const config = registry[componentName];
       if (!config) return;
 
@@ -127,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll<HTMLElement>(".rt-player-card")
     .forEach((container) => {
-      const componentName = container.dataset.component ?? "terminal-3d";
+      const componentName = container.dataset.component ?? "code-walkthrough";
       const config = registry[componentName];
       if (!config) return;
 
@@ -138,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Single scene page — autoplay preview
   const singleEl = document.getElementById("remotion-single-preview");
   if (singleEl) {
-    const name = singleEl.dataset.component ?? "terminal-3d";
+    const name = singleEl.dataset.component ?? "code-walkthrough";
     const config = registry[name];
     if (config) {
       createRoot(singleEl).render(

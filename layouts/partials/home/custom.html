@@ -103,8 +103,13 @@
               -webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);
               mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);">
     <div id="rt-carousel-track" style="display:flex; gap:1.25rem; width:max-content;">
-      {{ $items := slice "terminal-3d" "transform3d-showcase" "terminal-3d" "transform3d-showcase" "terminal-3d"
-      "transform3d-showcase" }}
+      {{- $compPage := site.GetPage "/components" -}}
+      {{- $items := slice -}}
+      {{- if $compPage -}}
+        {{- range $compPage.Pages -}}
+          {{- $items = $items | append .Params.component -}}
+        {{- end -}}
+      {{- end -}}
       {{ range $items }}
       <div
         style="width:380px; height:214px; position:relative; border-radius:12px; overflow:hidden; background:#0f0f0f; border:1px solid #2a2a2a; flex-shrink:0;">
@@ -124,7 +129,7 @@
 
   <!-- CTA -->
   <div style="text-align:center; position:relative; z-index:1;">
-    <a href="{{ " components/" | relURL }}"
+    <a href="{{ "components/" | relURL }}"
       style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
       onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
       Browse components →
