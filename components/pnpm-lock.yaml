@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@extrai-lab/kinetica-remotion':
-        specifier: ^0.1.0
-        version: 0.1.0(@remotion/tailwind-v4@4.0.454(@remotion/bundler@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.106.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(remotion@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@4.2.4)(zod@3.25.76)
+        specifier: ^0.1.4
+        version: 0.1.4(@remotion/tailwind-v4@4.0.454(@remotion/bundler@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.106.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(remotion@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@4.2.4)(zod@3.25.76)
       '@remotion/player':
         specifier: ^4.0.454
         version: 4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -438,8 +438,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@extrai-lab/kinetica-remotion@0.1.0':
-    resolution: {integrity: sha512-zCIBLAXA3nZqTgphfa61IaL9E5P5E7cqW4gH35BPiJeZ1LqG7DYfxJLjamVncWNa9U5ZqBJW/odG7mIeO7gOlw==}
+  '@extrai-lab/kinetica-remotion@0.1.4':
+    resolution: {integrity: sha512-MWDfAnVTbe/YGmytI09iw7pnbZopWx/53dEqvF97URITzKNtFhikuUbGj5kGwy7PKUPd+EFPoBuVPonvTHOUdg==}
     peerDependencies:
       '@remotion/tailwind-v4': ^4.0.0
       react: ^18.0.0 || ^19.0.0
@@ -2282,19 +2282,15 @@ snapshots:
   '@esbuild/win32-x64@0.25.0':
     optional: true
 
-  '@extrai-lab/kinetica-remotion@0.1.0(@remotion/tailwind-v4@4.0.454(@remotion/bundler@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.106.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(remotion@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@4.2.4)(zod@3.25.76)':
+  '@extrai-lab/kinetica-remotion@0.1.4(@remotion/tailwind-v4@4.0.454(@remotion/bundler@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.106.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(remotion@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tailwindcss@4.2.4)(zod@3.25.76)':
     dependencies:
       '@remotion/tailwind-v4': 4.0.454(@remotion/bundler@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(webpack@5.106.2)
-      culori: 4.0.2
+      '@remotion/zod-types': 4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.25.76)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       remotion: 4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      remotion-bits: 0.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(remotion@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(zod@3.25.76)
       tailwindcss: 4.2.4
       zod: 3.25.76
-    transitivePeerDependencies:
-      - '@cfworker/json-schema'
-      - supports-color
 
   '@hono/node-server@1.19.14(hono@4.12.15)':
     dependencies:
@@ -2530,6 +2526,14 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       remotion: 4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  '@remotion/zod-types@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@3.25.76)':
+    dependencies:
+      remotion: 4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   '@remotion/zod-types@4.0.454(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(zod@4.3.6)':
     dependencies:

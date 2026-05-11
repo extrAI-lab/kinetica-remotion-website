@@ -1,6 +1,8 @@
-colorScheme = "slate"
-defaultAppearance = "dark"
-autoSwitchAppearance = true
+logo = "img/logo.png"
+
+colorScheme = "kinetica"
+defaultAppearance = "light"
+autoSwitchAppearance = false
 
 enableSearch = true
 enableCodeCopy = false
@@ -9,7 +11,7 @@ mainSections = ["components"]
 thumbnailAspectRatio = "1.77"
 
 disableImageOptimization = false
-disableTextInHeader = false
+disableTextInHeader = true
 
 [header]
   layout = "fixed"

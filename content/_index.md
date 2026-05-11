@@ -1,4 +1,4 @@
 ---
-title: "Remotion Components"
-description: "Professional video components built with Remotion"
+title: "Kinetica Remotion"
+description: "Self-contained Remotion components, ready to install and ship."
 ---
