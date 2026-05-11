@@ -1,122 +1,225 @@
 {{ define "main" }}
 <style>
-  .rt-preview {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: #0f0f0f;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #2a2a2a;
-  }
-  .rt-top {
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 1.25rem;
-    align-items: start;
-    margin-bottom: 1.25rem;
-  }
-  @media (max-width: 720px) {
-    .rt-top { grid-template-columns: 1fr; }
-  }
-  #rt-cmd-box { transition: border-color 0.15s, background 0.15s; }
-  #rt-cmd-box:hover { border-color: #b8a8e8 !important; background: #f0edff !important; }
-  #rt-cmd-box:hover code { color: #5b3ae8; }
-  #rt-snackbar {
-    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(12px);
-    background: #27272a; color: #e5e5e5; font-size: 0.82rem; font-family: system-ui, sans-serif;
-    padding: 0.5rem 1.25rem; border-radius: 999px; border: 1px solid #3f3f46;
-    opacity: 0; transition: opacity 0.2s, transform 0.2s; pointer-events: none; z-index: 100;
-    white-space: nowrap;
-  }
-  #rt-snackbar.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .rt-action-link { transition: color 0.15s; }
-  .rt-action-link:hover { color: #6d41dc !important; }
+    .rt-preview {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: #0f0f0f;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #2a2a2a;
+    }
+    .rt-top {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 1.25rem;
+        align-items: start;
+        margin-bottom: 1.25rem;
+    }
+    @media (max-width: 720px) {
+        .rt-top {
+            grid-template-columns: 1fr;
+        }
+    }
+    #rt-cmd-box {
+        transition:
+            border-color 0.15s,
+            background 0.15s;
+    }
+    #rt-cmd-box:hover {
+        border-color: #b8a8e8 !important;
+        background: #f0edff !important;
+    }
+    #rt-cmd-box:hover code {
+        color: #5b3ae8;
+    }
+    #rt-snackbar {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(12px);
+        background: #27272a;
+        color: #e5e5e5;
+        font-size: 0.82rem;
+        font-family: system-ui, sans-serif;
+        padding: 0.5rem 1.25rem;
+        border-radius: 999px;
+        border: 1px solid #3f3f46;
+        opacity: 0;
+        transition:
+            opacity 0.2s,
+            transform 0.2s;
+        pointer-events: none;
+        z-index: 100;
+        white-space: nowrap;
+    }
+    #rt-snackbar.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    .rt-action-link {
+        transition: color 0.15s;
+    }
+    .rt-action-link:hover {
+        color: #6d41dc !important;
+    }
 </style>
 
-<article class="pb-16 pt-2">
-
-  <!-- Back -->
-  <div class="mb-8">
-    <button
-      onclick="history.length > 1 ? history.back() : (window.location.href = '/components/')"
-      class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-4 py-1.5 text-sm text-neutral-500 hover:text-neutral-800 hover:border-neutral-500 transition-colors cursor-pointer"
-    >← Back</button>
-  </div>
-
-  <!-- Title -->
-  <h1 class="text-3xl font-bold text-neutral-900 mb-5">{{ .Title }}</h1>
-
-  {{ $component := .Params.component | default "terminal-3d" }}
-  {{ $w := .Params.width | default 16 }}
-  {{ $h := .Params.height | default 9 }}
-
-  <!-- Preview + Sidebar row -->
-  <div class="rt-top">
-
-    <!-- Preview -->
-    <div class="rt-preview" data-w="{{ $w }}" data-h="{{ $h }}">
-      <div
-        id="remotion-single-preview"
-        data-component="{{ $component }}"
-        style="position:absolute; inset:0; width:100%; height:100%;"
-      ></div>
+<article class="pb-16" style="padding-top: 5rem">
+    <!-- Back -->
+    <div class="mb-8">
+        <button
+            onclick="
+                history.length > 1
+                    ? history.back()
+                    : (window.location.href = '/components/')
+            "
+            class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-4 py-1.5 text-sm text-neutral-500 hover:text-neutral-800 hover:border-neutral-500 transition-colors cursor-pointer"
+        >
+            ← Back
+        </button>
     </div>
 
-    <!-- Sidebar -->
-    <div style="display:flex; flex-direction:column; gap:0.75rem;">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-neutral-900 mb-5">{{ .Title }}</h1>
 
-      {{ with .Params.component }}
-      {{- $slug := . -}}
-      <div class="rounded-xl border border-neutral-200 p-4" style="background:#f8f8fc;">
-        <p class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3">Add to project</p>
-        <p style="font-size:0.72rem; color:#52526a; margin:0 0 0.65rem; line-height:1.45;">
-          Add to an existing Kinetica project (already scaffolded with <code style="font-size:0.7rem;">kinetica-remotion-cli init</code>).
-        </p>
-        <div id="rt-cmd-box" onclick="rtCopyCmd(this)"
-          style="display:flex;align-items:center;gap:0.75rem;background:#fff;border:1px solid #e4e4f0;border-radius:8px;padding:0.6rem 0.75rem;cursor:pointer;"
-          title="Click to copy">
-          <span style="width:28px;height:28px;background:#cc3534;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:900;color:white;">n</span>
-          <code class="text-sm text-neutral-800" style="word-break:break-all;flex:1;">npx kinetica-remotion-cli add-components {{ $slug }}</code>
+    {{ $component := .Params.component | default "terminal-3d" }} {{ $w :=
+    .Params.width | default 16 }} {{ $h := .Params.height | default 9 }}
+
+    <!-- Preview + Sidebar row -->
+    <div class="rt-top">
+        <!-- Preview -->
+        <div class="rt-preview" data-w="{{ $w }}" data-h="{{ $h }}">
+            <div
+                id="remotion-single-preview"
+                data-component="{{ $component }}"
+                style="position: absolute; inset: 0; width: 100%; height: 100%"
+            ></div>
         </div>
-      </div>
-      {{ end }}
 
-      {{ with .Params.github }}
-      <div class="rounded-xl border border-neutral-200 p-4" style="background:#f8f8fc;">
-        <a href="{{ . }}" target="_blank" rel="noopener" class="rt-action-link"
-           style="display:flex;align-items:center;gap:0.75rem;color:#1a1a2e;text-decoration:none;">
-          <span style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            {{ partial "icon.html" "github" }}
-          </span>
-          <span class="text-sm font-medium">View source</span>
-        </a>
-      </div>
-      {{ end }}
-
+        <!-- Sidebar -->
+        <div style="display: flex; flex-direction: column; gap: 0.75rem">
+            {{ with .Params.component }} {{- $slug := . -}}
+            <div
+                class="rounded-xl border border-neutral-200 p-4"
+                style="background: #f8f8fc"
+            >
+                <p
+                    class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-3"
+                >
+                    Add to project
+                </p>
+                <p
+                    style="
+                        font-size: 0.72rem;
+                        color: #52526a;
+                        margin: 0 0 0.65rem;
+                        line-height: 1.45;
+                    "
+                >
+                    Add to an existing Kinetica project (already scaffolded with
+                    <code style="font-size: 0.7rem"
+                        >kinetica-remotion-cli init</code
+                    >).
+                </p>
+                <div
+                    id="rt-cmd-box"
+                    onclick="rtCopyCmd(this)"
+                    style="
+                        display: flex;
+                        align-items: center;
+                        gap: 0.75rem;
+                        background: #fff;
+                        border: 1px solid #e4e4f0;
+                        border-radius: 8px;
+                        padding: 0.6rem 0.75rem;
+                        cursor: pointer;
+                    "
+                    title="Click to copy"
+                >
+                    <span
+                        style="
+                            width: 28px;
+                            height: 28px;
+                            background: #cc3534;
+                            border-radius: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            font-size: 10px;
+                            font-weight: 900;
+                            color: white;
+                        "
+                        >n</span
+                    >
+                    <code
+                        class="text-sm text-neutral-800"
+                        style="word-break: break-all; flex: 1"
+                        >npx kinetica-remotion-cli add-components {{ $slug
+                        }}</code
+                    >
+                </div>
+            </div>
+            {{ end }} {{ with .Params.github }}
+            <div
+                class="rounded-xl border border-neutral-200 p-4"
+                style="background: #f8f8fc"
+            >
+                <a
+                    href="{{ . }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="rt-action-link"
+                    style="
+                        display: flex;
+                        align-items: center;
+                        gap: 0.75rem;
+                        color: #1a1a2e;
+                        text-decoration: none;
+                    "
+                >
+                    <span
+                        style="
+                            width: 28px;
+                            height: 28px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                        "
+                    >
+                        {{ partial "icon.html" "github" }}
+                    </span>
+                    <span class="text-sm font-medium">View source</span>
+                </a>
+            </div>
+            {{ end }}
+        </div>
     </div>
-  </div>
 
-  <!-- Description — full width below -->
-  <div class="rounded-xl border border-neutral-200 p-6" style="background:#f8f8fc;">
-    <div class="prose max-w-full">
-      {{ .Content }}
+    <!-- Description — full width below -->
+    <div
+        class="rounded-xl border border-neutral-200 p-6"
+        style="background: #f8f8fc"
+    >
+        <div class="prose max-w-full">{{ .Content }}</div>
     </div>
-  </div>
-
 </article>
 
 <div id="rt-snackbar">Copied to clipboard</div>
 <script>
-function rtCopyCmd(box) {
-  navigator.clipboard.writeText(box.querySelector('code').textContent);
-  var sb = document.getElementById('rt-snackbar');
-  sb.classList.add('show');
-  setTimeout(function () { sb.classList.remove('show'); }, 1500);
-}
-(function () {
-  var p = document.querySelector('.rt-preview[data-w]');
-  if (p) p.style.aspectRatio = p.dataset.w + ' / ' + p.dataset.h;
-})();
+    function rtCopyCmd(box) {
+        navigator.clipboard.writeText(box.querySelector("code").textContent);
+        var sb = document.getElementById("rt-snackbar");
+        sb.classList.add("show");
+        setTimeout(function () {
+            sb.classList.remove("show");
+        }, 1500);
+    }
+    (function () {
+        var p = document.querySelector(".rt-preview[data-w]");
+        if (p) p.style.aspectRatio = p.dataset.w + " / " + p.dataset.h;
+    })();
 </script>
 {{ end }}

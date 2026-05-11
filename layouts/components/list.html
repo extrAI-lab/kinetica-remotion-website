@@ -206,7 +206,7 @@
     }
 </style>
 
-<div style="padding-top: 1.5rem; padding-bottom: 6rem">
+<div style="padding-top: 5rem; padding-bottom: 6rem">
     <h1
         style="
             font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -262,14 +262,10 @@
                         All
                     </button>
                 </li>
-                {{- $cats := slice -}}
-                {{- range .Pages -}}
-                  {{- with .Params.category -}}
-                    {{- $cats = $cats | append . -}}
-                  {{- end -}}
-                {{- end -}}
-                {{- $cats = $cats | uniq | sort -}}
-                {{- range $cats }}
+                {{- $cats := slice -}} {{- range .Pages -}} {{- with
+                .Params.category -}} {{- $cats = $cats | append . -}} {{- end
+                -}} {{- end -}} {{- $cats = $cats | uniq | sort -}} {{- range
+                $cats }}
                 <li>
                     <button class="rt-cat-btn" data-cat="{{ . }}">
                         {{ . }}

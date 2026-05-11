@@ -12,12 +12,6 @@ import {
   barChartRaceSceneDefaults,
   StatisticEmphasisScene,
   statisticEmphasisSceneDefaults,
-  NetworkGraphScene,
-  networkGraphSceneDefaults,
-  ProductShowcaseScene,
-  productShowcaseSceneDefaults,
-  PhysicsInteractionScene,
-  physicsInteractionSceneDefaults,
 } from "@extrai-lab/kinetica-remotion";
 
 type AnyComponent = React.FC<Record<string, unknown>>;
@@ -77,33 +71,6 @@ const registry: Record<string, ComponentConfig> = {
     durationInFrames: 360,
     posterFrame: 60,
     defaultProps: statisticEmphasisSceneDefaults as Record<string, unknown>,
-  },
-  "network-graph": {
-    component: NetworkGraphScene as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 360,
-    posterFrame: 60,
-    defaultProps: networkGraphSceneDefaults as Record<string, unknown>,
-  },
-  "product-showcase-mobile": {
-    component: ProductShowcaseScene as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 300,
-    posterFrame: 60,
-    defaultProps: productShowcaseSceneDefaults as Record<string, unknown>,
-  },
-  "physics-interaction": {
-    component: PhysicsInteractionScene as AnyComponent,
-    width: 1920,
-    height: 1080,
-    fps: 30,
-    durationInFrames: 360,
-    posterFrame: 60,
-    defaultProps: physicsInteractionSceneDefaults as Record<string, unknown>,
   },
 };
 
