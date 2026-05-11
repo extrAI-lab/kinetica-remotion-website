@@ -64,9 +64,9 @@
   }
 </style>
 
-<div style="position:relative; overflow:hidden; padding-bottom:5rem;
-            -webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);
-            mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);">
+<div style="position:relative; overflow:hidden; padding-bottom:2rem;
+            -webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 20px),transparent 100%);
+            mask-image:linear-gradient(to bottom,#000 calc(100% - 20px),transparent 100%);">
   <!-- SVG background lines -->
   <svg style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;" viewBox="0 0 1 1"
     preserveAspectRatio="xMidYMid slice">
@@ -90,7 +90,7 @@
   </svg>
 
   <!-- Hero text -->
-  <div class="pb-10 text-center" style="padding-top:5rem; position:relative; z-index:1;">
+  <div class="pb-10 text-center" style="padding-top:9rem; position:relative; z-index:1;">
     <h1 class="font-extrabold tracking-tight text-neutral-900"
       style="font-size:clamp(2rem,4.5vw,3.5rem); line-height:1.15; margin:0 auto 1rem;">
       Self-contained Remotion components,<br>ready to install and ship.
@@ -130,7 +130,7 @@
 </div>
 
 <!-- CTA -->
-<div style="text-align:center; padding-bottom:5rem;">
+<div style="text-align:center; padding-bottom:5rem; margin-top:-1rem;">
   <a href="{{ "components/" | relURL }}"
     style="display:inline-flex; align-items:center; gap:0.5rem; background:#6d41dc; color:#fff; font-weight:600; font-size:1rem; padding:0.75rem 2rem; border-radius:999px; text-decoration:none; transition:background 0.15s;"
     onmouseover="this.style.background='#5a2ec3'" onmouseout="this.style.background='#6d41dc'">
