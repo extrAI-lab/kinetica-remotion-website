@@ -12,7 +12,11 @@ import {
   barChartRaceSceneDefaults,
   StatisticEmphasisScene,
   statisticEmphasisSceneDefaults,
-} from "@extrai-lab/kinetica-remotion";
+  AppShowcaseMobileScene,
+  appShowcaseMobileSceneDefaults,
+  ChatScene,
+  chatSceneDefaults,
+} from "@extrai-lab/kinetica";
 
 type AnyComponent = React.FC<Record<string, unknown>>;
 
@@ -71,6 +75,24 @@ const registry: Record<string, ComponentConfig> = {
     durationInFrames: 360,
     posterFrame: 60,
     defaultProps: statisticEmphasisSceneDefaults as Record<string, unknown>,
+  },
+  "app-showcase-mobile": {
+    component: AppShowcaseMobileScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 328,
+    posterFrame: 60,
+    defaultProps: appShowcaseMobileSceneDefaults as Record<string, unknown>,
+  },
+  "chat": {
+    component: ChatScene as AnyComponent,
+    width: 1920,
+    height: 1080,
+    fps: 30,
+    durationInFrames: 500,
+    posterFrame: 80,
+    defaultProps: chatSceneDefaults as Record<string, unknown>,
   },
 };
 
@@ -166,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   // Single scene page — autoplay preview
-  const singleEl = document.getElementById("remotion-single-preview");
+  const singleEl = document.getElementById("kinetica-single-preview");
   if (singleEl) {
     const name = singleEl.dataset.component ?? "code-walkthrough";
     const config = registry[name];

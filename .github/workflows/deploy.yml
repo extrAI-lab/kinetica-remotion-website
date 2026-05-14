@@ -48,7 +48,7 @@ jobs:
         with:
           version: 10
 
-      - name: Build remotion-components.js
+      - name: Build kinetica-components.js
         working-directory: components
         run: pnpm install --frozen-lockfile && pnpm build
 

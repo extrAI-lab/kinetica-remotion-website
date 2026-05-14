@@ -6,7 +6,7 @@ tags: ["chart", "data", "ranking", "animation"]
 category: "Data"
 component: "bar-chart-race"
 durationInFrames: 600
-github: "https://github.com/extrAI-lab/remotion-components/tree/main/src/components/bar-chart-race"
+github: "https://github.com/extrAI-lab/kinetica/tree/main/src/components/bar-chart-race"
 ---
 
 Animated ranking bars that smoothly transition as values and positions change over time. Automatic label and color assignment, with podium emphasis for top entries. Great for competitive metrics, leaderboards, and data storytelling.

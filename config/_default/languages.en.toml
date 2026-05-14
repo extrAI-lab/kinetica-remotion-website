@@ -1,16 +1,16 @@
 locale = "en"
 label = "English"
 weight = 1
-title = "Kinetica Remotion"
+title = "Kinetica"
 
 [params]
   displayName = "English"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Self-contained Remotion components, ready to install and ship."
+  description = "Self-contained animated components, ready to install and ship."
 
 [params.author]
-  name = "Kinetica Remotion"
-  headline = "Self-contained Remotion components, ready to install and ship."
-  bio = "Pick one or more components, run a single CLI command, get a ready-to-render Remotion project."
+  name = "Kinetica"
+  headline = "Self-contained animated components, ready to install and ship."
+  bio = "Pick one or more components, run a single CLI command, get a ready-to-animate project."

@@ -1,4 +1,4 @@
 ---
-title: "Kinetica Remotion"
-description: "Self-contained Remotion components, ready to install and ship."
+title: "Kinetica"
+description: "Self-contained animated components, ready to install and ship."
 ---

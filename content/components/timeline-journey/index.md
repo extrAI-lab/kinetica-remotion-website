@@ -6,7 +6,7 @@ tags: ["timeline", "data", "history", "story"]
 category: "Data"
 component: "timeline-journey"
 durationInFrames: 450
-github: "https://github.com/extrAI-lab/remotion-components/tree/main/src/components/timeline-journey"
+github: "https://github.com/extrAI-lab/kinetica/tree/main/src/components/timeline-journey"
 ---
 
 Animated timeline that zooms into each milestone showing a year label and circular image, then zooms out and travels to the next date. Ideal for company histories, product roadmaps, or personal story videos.

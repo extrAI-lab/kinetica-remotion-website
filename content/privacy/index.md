@@ -8,7 +8,7 @@ type: "legal"
 
 ## Who we are
 
-Kinetica is an open-source library of Remotion components. This website ([kinetica.dev](https://kinetica.dev)) is where you can browse, preview, and install those components.
+Kinetica is an open-source library of animated components. This website ([kinetica.dev](https://kinetica.dev)) is where you can browse, preview, and install those components.
 
 ## What data we collect
 

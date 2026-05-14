@@ -6,7 +6,7 @@ tags: ["map", "data", "geography", "animation"]
 category: "Data"
 component: "world-map"
 durationInFrames: 240
-github: "https://github.com/extrAI-lab/remotion-components/tree/main/src/components/world-map"
+github: "https://github.com/extrAI-lab/kinetica/tree/main/src/components/world-map"
 ---
 
 Animated world map with configurable start and end geographic coordinates. Draws animated arc paths between locations and renders labeled markers — perfect for travel, logistics, or global reach visualizations.

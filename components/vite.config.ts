@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 const local = (m) => path.resolve(__dirname, "node_modules", m);
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -13,7 +12,6 @@ export default defineConfig({
       "react/jsx-runtime": local("react/jsx-runtime.js"),
       "react/jsx-dev-runtime": local("react/jsx-dev-runtime.js"),
       "react-dom": local("react-dom"),
-      "remotion-bits": local("remotion-bits"),
     },
   },
   plugins: [react()],
@@ -23,9 +21,9 @@ export default defineConfig({
     rollupOptions: {
       input: "src/index.tsx",
       output: {
-        entryFileNames: "remotion-components.js",
+        entryFileNames: "kinetica-components.js",
         format: "iife",
-        name: "RemotionComponents",
+        name: "KineticaComponents",
         inlineDynamicImports: true,
       },
     },

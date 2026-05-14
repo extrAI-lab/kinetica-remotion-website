@@ -42,7 +42,7 @@
     Contribute a component
   </h1>
   <p style="font-size: 1rem; color: #52526a; line-height: 1.6; margin-bottom: 2.5rem;">
-    A component is a self-contained Remotion composition — users install one or more and they are sequenced automatically into a single video. Follow the steps below to get yours merged.
+    A component is a self-contained animated scene — users install one or more and they are sequenced automatically into a single video. Follow the steps below to get yours merged.
   </p>
 
   <!-- Steps -->
@@ -66,7 +66,7 @@
     <div>
       <h2 style="font-size:1rem; font-weight:700; color:#1a1a2e; margin:0.1rem 0 0.5rem;">Define the prop schema</h2>
       <p style="font-size:0.875rem; color:#52526a; line-height:1.55; margin:0 0 0.5rem;">
-        Every visual property (color, text, size, speed) must be a Zod-validated prop with a default. No hardcoded values inside the component. The <code style="color:#5b3ae8; background:#ebe8f8; padding:1px 6px; border-radius:4px;">*Defaults</code> export must include every prop — it is used as-is in Remotion Studio and by the CLI when scaffolding.
+        Every visual property (color, text, size, speed) must be a Zod-validated prop with a default. No hardcoded values inside the component. The <code style="color:#5b3ae8; background:#ebe8f8; padding:1px 6px; border-radius:4px;">*Defaults</code> export must include every prop — it is used as-is by the CLI when scaffolding.
       </p>
       <div class="ct-code">// schema.ts
 export const myComponentSchema = z.object({
@@ -163,7 +163,7 @@ export const myComponentDefaults: MyComponentProps = {
 
   <!-- CTA -->
   <div style="margin-top: 3rem;">
-    <a href="https://github.com/extrAI-lab/remotion-components" target="_blank" rel="noopener" class="ct-cta">
+    <a href="https://github.com/extrAI-lab/kinetica" target="_blank" rel="noopener" class="ct-cta">
       Open a PR on GitHub →
     </a>
   </div>

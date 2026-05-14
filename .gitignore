@@ -23,4 +23,6 @@ Thumbs.db
 
 # Components
 components/node_modules/*
+components/src/kinetica/
+static/js/kinetica-components.js
 .tokensave

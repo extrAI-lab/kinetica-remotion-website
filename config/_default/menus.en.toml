@@ -11,5 +11,5 @@
 [[main]]
   name = ""
   pre = "github"
-  url = "https://github.com/extrAI-lab/remotion-components"
+  url = "https://github.com/extrAI-lab/kinetica"
   weight = 20

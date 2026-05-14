@@ -1,4 +1,4 @@
 ---
 title: "Components"
-description: "Production-ready Remotion components built with kinetica."
+description: "Production-ready animated components built with kinetica."
 ---

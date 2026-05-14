@@ -12,7 +12,7 @@ By accessing this website or using the Kinetica CLI, you agree to these terms. I
 
 ## What Kinetica provides
 
-Kinetica is a free, open-source library of Remotion animation components. The website lets you browse components and generates a CLI command to install them into your own Remotion project.
+Kinetica is a free, open-source library of animated components. The website lets you browse components and generates a CLI command to install them into your own project.
 
 ## License
 
